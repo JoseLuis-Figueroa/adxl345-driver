@@ -53,5 +53,10 @@ A KY-57 logic analyzer is connected between the MCU and the ADXL345 acceleromete
 </table>
 </div>
 
+The KY-57 logic analyzer is used to show the ADXL345 accelerometer behavior. The ADXL345_init function configures the ADXL345 accelerometer with 10 bits full resolution at +/-4g and sets the device into measurement mode. Here is the implementation of the ADXL345_init function:
 
+
+The following images show each data transmission between the MCU and the ADXL345 within the ADXL345 function.
+
+The ADXL345_read function is used to get the x,y, and z axes of the accelerometer. The image illustrates the data transmission.
 

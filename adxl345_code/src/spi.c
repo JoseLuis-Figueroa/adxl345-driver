@@ -356,7 +356,7 @@ void SPI_receive(SpiChannel_t Channel, uint16_t *data, uint16_t size)
             asm("nop");
         }
         /* Read the data*/
-        *data = *dataRegister[Channel];
+        *data++ = *dataRegister[Channel];
         size--;
     }
 }

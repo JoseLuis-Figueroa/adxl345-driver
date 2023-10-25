@@ -114,17 +114,17 @@ void ADXL345_init(SpiChannel_t Channel, DioPort_t Port, DioPin_t Pin)
 static void ADXL345_write(SpiChannel_t Channel, DioPort_t Port, DioPin_t Pin, 
  uint8_t address, char value)
 {
-    uint8_t data[2];
+    uint16_t data[2];
     /*Enable multi-byte, place address into buffer*/
     data[0] = address | MULTI_BYTE_EN;
     /*Place the data into buffer*/
     data[1] = value;
     /*Pull cs line low to enable slave*/
-    DIO_pinWrite(Port, Pin, DIO_HIGH);
+    DIO_pinWrite(Port, Pin, DIO_LOW);
     /*Transmit data and address*/
     SPI_transfer(Channel, data, 2);
     /*Pull cs line high to disable slave*/
-    DIO_pinWrite(Port, Pin, DIO_LOW);
+    DIO_pinWrite(Port, Pin, DIO_HIGH);
 }
 
 /*****************************************************************************
@@ -163,18 +163,18 @@ static void ADXL345_write(SpiChannel_t Channel, DioPort_t Port, DioPin_t Pin,
  * 
 *****************************************************************************/
 void ADXL345_read(SpiChannel_t Channel, DioPort_t Port, DioPin_t Pin, 
-uint8_t address, uint8_t *data)
+uint16_t address, uint16_t *data)
 {
     /*Set read operation*/
     address |= READ_OPERATION;
     /*Enable multi-byte*/
     address |= MULTI_BYTE_EN;
     /*Pull cs line low to enable slave*/
-    DIO_pinWrite(Port, Pin, DIO_HIGH);
+    DIO_pinWrite(Port, Pin, DIO_LOW);
     /*Transmit the address*/
     SPI_transfer(Channel, &address, 1);
     /*Read 6 bytes*/
     SPI_receive(Channel, data, 6);
     /*Pull cs line high to disable slave*/
-    DIO_pinWrite(Port, Pin, DIO_LOW);
+    DIO_pinWrite(Port, Pin, DIO_HIGH);
 }

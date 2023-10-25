@@ -46,7 +46,7 @@ extern "C"{
 
 void ADXL345_init(SpiChannel_t Channel, DioPort_t Port, DioPin_t Pin);
 void ADXL345_read(SpiChannel_t Channel, DioPort_t Port, DioPin_t Pin, 
-uint8_t address, uint8_t *data);
+uint16_t address, uint16_t *data);
 
 #ifdef __cplusplus
 }   /*Extern C*/

@@ -1,0 +1,74 @@
+/**
+ * @mainpage ADXL345 Accelerometer Driver
+ *
+ * @section intro Introduction
+ * This project is a personal endeavor focused on developing reusable firmware for microcontroller platforms. The goal is to create a modular and efficient SPI reusable driver that can be easily adapted to various microcontrollers. The project communicates two boars (Master-Slave) between them. The DIO driver is used to configure the selected SPI port. 
+ *
+ * @section version Version Log
+ * - [Version 1.0] - Initial release
+ *
+ * @section architecture Software Architecture Overview
+ * The software architecture follows a layered approach. This design pattern separates low-level code (drivers or HALs), and application-specific code. A layered architecture promotes reusability and simplifies the portability between different applications or microcontrollers.
+ * The layered architecture can be seen in figure 1 and contains a driver and application layer operating on the hardware.
+ * 
+ * <center>
+ * <table>
+ *   <tr>
+ *     <td style="background-color: #eaf2ff; text-align: center;">Application Code</td>
+ *   </tr>
+ *   <tr>
+ *     <td style="background-color: #e8f8e8; text-align: center;">Drivers</td>
+ *   </tr>
+ *   <tr>
+ *     <td style="background-color: #fffbe6; text-align: center;">Hardware</td>
+ *   </tr>
+ * </table>
+ * Figure 1. Two-Layer Software Architecture.
+ * </center>
+ * 
+ * The driver layer includes all the code (drivers) necessary to get the microcontroller and any other associated board hardware, such as sensors (accelerometer), buttons, and so forth, running. 
+ * The application code (main) contains no driver code but has access to the low-level hardware through a driver-layer interface that hides the hardware details from the application developer but still allows them to perform a useful function.
+ *
+ * @section coding-standards Coding Standards
+ * This project is developed as bare-metal firmware and adheres to industry-standard coding practices, following the MISRA-C guidelines. This includes consistent naming conventions, code formatting, and best practices for code organization and documentation.
+ *
+ * @section description Project Description
+ * In this setup, the SPI1 is configured as a master. The setting includes a baud rate = 4KHz, full duplex communication, an 8-bit data frame format, and most significant bit transmission. The SPI driver is used to configure the ADXL345 accelerometer.
+ * A KY-57 logic analyzer is connected between the MCU and the ADXL345 accelerometer for data reception and analysis. To establish the physical connections, the GPIO driver configures the SPI1 pins. 
+ * The following table illustrates the pin connections among the Nucleo board, and KY-57 logic analyzer:
+ *
+ * <center>
+ * @tableofcontents
+ * 
+ * | SPI Connection | Nucleo F401RE | ADXL345 | Logic Analyzer |
+ * |----------------|---------------|---------|----------------|
+ * | NSS            | PA4           | CS      | CH4            |
+ * | SCK            | PA5           | SCL     | CH1            |
+ * | MISO           | PA6           | SDO     | CH2            |
+ * | MOSI           | PA7           | SDA     | CH3            |
+ * Table 1. SPI Pin Connections.
+ * </center>
+ *
+ * The ADXL345_init function configures the ADXL345 accelerometer with 10 bits full resolution at +/-4g and sets the device into measurement mode. The application code retrieves data from the accelerometer's x, and y axes, subsequently processing this data to obtain the g-scale factor.
+ *
+ * @section requirements Project Requirements
+ * The project aims to meet the following requirements:
+ * - Provide a set of reusable functions for ADXL345 accelerometer.
+ * - Maintain portability across different microcontroller platforms.
+ * - Follow industry-standard coding practices and guidelines.
+ *
+ * @section tools Tools
+ * The current tooling used for this project includes:
+ * - Development Board: Nucleo-F401RE
+ * - IDE/Debugger: Visual Studio Code (PlatformIO extension)
+ * - Compiler Toolchain: GNU ARM Embedded Toolchain
+ *
+ * @section usage Usage
+ * The project is well-documented using Doxygen. Inline comments are used extensively to provide detailed explanations of code functionality, usage, and limitations. The Doxygen-generated documentation provides an easy-to-navigate reference for all project components.
+ *
+ * @section acronyms Acronyms
+ * - MCU: Microcontroller Unit
+ * - SPI: Serial Peripheral Interface
+ * - DIO: Digital Input/Output
+ *
+*/

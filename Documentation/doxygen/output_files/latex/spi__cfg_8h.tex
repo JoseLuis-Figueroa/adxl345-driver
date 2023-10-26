@@ -1,0 +1,353 @@
+\hypertarget{spi__cfg_8h}{}\doxysection{C\+:/\+Users/figue/\+Documents/2.Electronics/1.Embedded\+\_\+\+Systems/\+STM32/\+Bare\+\_\+\+Metal/\+Boards/\+Nucleo\+\_\+\+F401\+RE/\+Projects/adxl345-\/driver/adxl345\+\_\+code/include/spi\+\_\+cfg.h File Reference}
+\label{spi__cfg_8h}\index{C:/Users/figue/Documents/2.Electronics/1.Embedded\_Systems/STM32/Bare\_Metal/Boards/Nucleo\_F401RE/Projects/adxl345-\/driver/adxl345\_code/include/spi\_cfg.h@{C:/Users/figue/Documents/2.Electronics/1.Embedded\_Systems/STM32/Bare\_Metal/Boards/Nucleo\_F401RE/Projects/adxl345-\/driver/adxl345\_code/include/spi\_cfg.h}}
+
+
+This module contains interface definitions for the SPI configuration. This is the header file for the definition of the interface for retrieving the Serial Peripheral interface configuration table.  
+
+
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{spi__cfg_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_spi_config__t}{Spi\+Config\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{spi__cfg_8h_a95f741c335280d2a4856d763a206c3e1}{SPI\+\_\+\+PORTS\+\_\+\+NUMBER}}~4U
+\item 
+\#define \mbox{\hyperlink{spi__cfg_8h_a9c7819d19280ce30224b2f46bd62ee4d}{SPI\+\_\+\+CHANNELS\+\_\+\+NUMBER}}~1
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{spi__cfg_8h_a8ed88c83798d221d2afb7ab8b4023faa}{Spi\+Channel\+\_\+t}} \{ \mbox{\hyperlink{spi__cfg_8h_a8ed88c83798d221d2afb7ab8b4023faaae01f25f2493c2b0a1406ee1371a2752d}{SPI\+\_\+\+CHANNEL1}}
+, \mbox{\hyperlink{spi__cfg_8h_a8ed88c83798d221d2afb7ab8b4023faaa4acd0d9734887e78aa4c50dfc78fcbfa}{SPI\+\_\+\+CHANNEL2}}
+, \mbox{\hyperlink{spi__cfg_8h_a8ed88c83798d221d2afb7ab8b4023faaa1b7e43cfe92e1412fc1d13622e099a6f}{SPI\+\_\+\+CHANNEL3}}
+, \mbox{\hyperlink{spi__cfg_8h_a8ed88c83798d221d2afb7ab8b4023faaaad41df2ed0eb35b857f48bd36cf9f91e}{SPI\+\_\+\+CHANNEL4}}
+ \}
+\item 
+enum \mbox{\hyperlink{spi__cfg_8h_af7fd666f01e1a2fe00c42b85eaa3bf4d}{Spi\+Mode\+\_\+t}} \{ \newline
+\mbox{\hyperlink{spi__cfg_8h_af7fd666f01e1a2fe00c42b85eaa3bf4daacf2eef6aadb9f0de11862660cd9ade6}{SPI\+\_\+\+MODE0}}
+, \mbox{\hyperlink{spi__cfg_8h_af7fd666f01e1a2fe00c42b85eaa3bf4dabd92ab028fcac05cf2ed27b4838d1590}{SPI\+\_\+\+MODE1}}
+, \mbox{\hyperlink{spi__cfg_8h_af7fd666f01e1a2fe00c42b85eaa3bf4da2607e91fc0c8ae3334284808d7f94cf5}{SPI\+\_\+\+MODE2}}
+, \mbox{\hyperlink{spi__cfg_8h_af7fd666f01e1a2fe00c42b85eaa3bf4dad9636eac0759655110aa77dd6c22da6c}{SPI\+\_\+\+MODE3}}
+, \newline
+\mbox{\hyperlink{spi__cfg_8h_af7fd666f01e1a2fe00c42b85eaa3bf4da0b45ed1f5218bc73fa94541b4aac2ae8}{SPI\+\_\+\+MAX\+\_\+\+MODE}}
+ \}
+\item 
+enum \mbox{\hyperlink{spi__cfg_8h_a402dd0baa9458df07d91ef47836ffe47}{Spi\+Hierarchy\+\_\+t}} \{ \mbox{\hyperlink{spi__cfg_8h_a402dd0baa9458df07d91ef47836ffe47abc98c1546fe12d3fceb1f86cf670faa9}{SPI\+\_\+\+SLAVE}}
+, \mbox{\hyperlink{spi__cfg_8h_a402dd0baa9458df07d91ef47836ffe47a84379dc90398ca075038c8d5ee465f6a}{SPI\+\_\+\+MASTER}}
+, \mbox{\hyperlink{spi__cfg_8h_a402dd0baa9458df07d91ef47836ffe47a74f9bb6b6dcadbd87ebf9e0639eea22b}{SPI\+\_\+\+MAX\+\_\+\+HIERARCHY}}
+ \}
+\item 
+enum \mbox{\hyperlink{spi__cfg_8h_a3cb3dda1124db8846befff5be1bdfb2f}{Spi\+Baud\+Rate\+\_\+t}} \{ \newline
+\mbox{\hyperlink{spi__cfg_8h_a3cb3dda1124db8846befff5be1bdfb2fae5cb9a0a4b196e9ec1681086178f43a5}{SPI\+\_\+\+FPCLK2}}
+, \mbox{\hyperlink{spi__cfg_8h_a3cb3dda1124db8846befff5be1bdfb2fa8231bf0ac5d9725518ece77bfd9bec1e}{SPI\+\_\+\+FPCLK4}}
+, \mbox{\hyperlink{spi__cfg_8h_a3cb3dda1124db8846befff5be1bdfb2fa7c9d2a86e8941e0953c2ef0cd8a46bcb}{SPI\+\_\+\+FPCLK8}}
+, \mbox{\hyperlink{spi__cfg_8h_a3cb3dda1124db8846befff5be1bdfb2fa4eda387d99095fe4123218eb38ce65a0}{SPI\+\_\+\+FPCLK16}}
+, \newline
+\mbox{\hyperlink{spi__cfg_8h_a3cb3dda1124db8846befff5be1bdfb2fa0d5c4f2cf613998bb015d70345b510e9}{SPI\+\_\+\+FPCLK32}}
+, \mbox{\hyperlink{spi__cfg_8h_a3cb3dda1124db8846befff5be1bdfb2fac8be4db7bdb1a09c825fad77b8d05380}{SPI\+\_\+\+FPCLK64}}
+, \mbox{\hyperlink{spi__cfg_8h_a3cb3dda1124db8846befff5be1bdfb2fa0259700cd228ebf08e669068d71fa9bd}{SPI\+\_\+\+FPCLK128}}
+, \mbox{\hyperlink{spi__cfg_8h_a3cb3dda1124db8846befff5be1bdfb2fab1cbc24d1c799b53e5bd59c70585bef0}{SPI\+\_\+\+FPCLK256}}
+, \newline
+\mbox{\hyperlink{spi__cfg_8h_a3cb3dda1124db8846befff5be1bdfb2faced845e24384be571bfd19b049e054c3}{SPI\+\_\+\+MAX\+\_\+\+FPCLK}}
+ \}
+\item 
+enum \mbox{\hyperlink{spi__cfg_8h_a474aab4df5cccbad97f07bffe96dfb34}{Spi\+Slave\+Select\+\_\+t}} \{ \mbox{\hyperlink{spi__cfg_8h_a474aab4df5cccbad97f07bffe96dfb34a9f2f0be2769400d90f74adacbc3db246}{SOFTWARE\+\_\+\+NSS}}
+, \mbox{\hyperlink{spi__cfg_8h_a474aab4df5cccbad97f07bffe96dfb34a21040ae68209a0a22c86e627d17b7778}{HARDWARE\+\_\+\+NSS\+\_\+\+ENABLED}}
+, \mbox{\hyperlink{spi__cfg_8h_a474aab4df5cccbad97f07bffe96dfb34a354f1da6f400e644c45ba8b28d26df16}{HARDWARE\+\_\+\+NSS\+\_\+\+DISABLED}}
+ \}
+\item 
+enum \mbox{\hyperlink{spi__cfg_8h_ad0d0fad64f9813e5853f46b5bc1a3af9}{Spi\+Frame\+Format\+\_\+t}} \{ \mbox{\hyperlink{spi__cfg_8h_ad0d0fad64f9813e5853f46b5bc1a3af9a1eae4fe3047bf4fbef593e1d39562f45}{SPI\+\_\+\+MSB}}
+, \mbox{\hyperlink{spi__cfg_8h_ad0d0fad64f9813e5853f46b5bc1a3af9a97ce763136b0802785b49cf4d507e1b0}{SPI\+\_\+\+LSB}}
+, \mbox{\hyperlink{spi__cfg_8h_ad0d0fad64f9813e5853f46b5bc1a3af9a5485b226c3fe8c379549db70f1a821e2}{SPI\+\_\+\+MAX\+\_\+\+FF}}
+ \}
+\item 
+enum \mbox{\hyperlink{spi__cfg_8h_ad62f9d63a1ab4982d18a733bec771326}{Spi\+Type\+Transfer\+\_\+t}} \{ \mbox{\hyperlink{spi__cfg_8h_ad62f9d63a1ab4982d18a733bec771326ab90ebf6910c1da04cfe4fe611b46866f}{SPI\+\_\+\+FULL\+\_\+\+DUPLEX}}
+, \mbox{\hyperlink{spi__cfg_8h_ad62f9d63a1ab4982d18a733bec771326abc167d862cc6ea23a7b5ac40730b6e5f}{SPI\+\_\+\+RECEIVE\+\_\+\+MODE}}
+, \mbox{\hyperlink{spi__cfg_8h_ad62f9d63a1ab4982d18a733bec771326ab5734c4b18de17cd5bc54a57bc463ace}{SPI\+\_\+\+MAX\+\_\+\+DF}}
+ \}
+\item 
+enum \mbox{\hyperlink{spi__cfg_8h_abcc4f72e578adda03140d4dd9e459eba}{Spi\+Data\+Size\+\_\+t}} \{ \mbox{\hyperlink{spi__cfg_8h_abcc4f72e578adda03140d4dd9e459ebaa7d0f3f931e11690790cd430da3023142}{SPI\+\_\+8\+BITS}}
+, \mbox{\hyperlink{spi__cfg_8h_abcc4f72e578adda03140d4dd9e459ebaa43039bc9dc6d36ddb07d5565ddff0cf2}{SPI\+\_\+16\+BITS}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{struct_spi_config__t}{Spi\+Config\+\_\+t}} $\ast$const \mbox{\hyperlink{spi__cfg_8h_a72af5b1b28647c0f42591ecd067fccb9}{SPI\+\_\+\+Config\+Get}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This module contains interface definitions for the SPI configuration. This is the header file for the definition of the interface for retrieving the Serial Peripheral interface configuration table. 
+
+\begin{DoxyAuthor}{Author}
+Jose Luis Figueroa 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2023-\/07-\/14
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2023 Jose Luis Figueroa. MIT License. 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{spi__cfg_8h_a9c7819d19280ce30224b2f46bd62ee4d}\label{spi__cfg_8h_a9c7819d19280ce30224b2f46bd62ee4d}} 
+\index{spi\_cfg.h@{spi\_cfg.h}!SPI\_CHANNELS\_NUMBER@{SPI\_CHANNELS\_NUMBER}}
+\index{SPI\_CHANNELS\_NUMBER@{SPI\_CHANNELS\_NUMBER}!spi\_cfg.h@{spi\_cfg.h}}
+\doxysubsubsection{\texorpdfstring{SPI\_CHANNELS\_NUMBER}{SPI\_CHANNELS\_NUMBER}}
+{\footnotesize\ttfamily \#define SPI\+\_\+\+CHANNELS\+\_\+\+NUMBER~1}
+
+Set the value according with the number of Serial Peripheral interface channels to be used. \mbox{\Hypertarget{spi__cfg_8h_a95f741c335280d2a4856d763a206c3e1}\label{spi__cfg_8h_a95f741c335280d2a4856d763a206c3e1}} 
+\index{spi\_cfg.h@{spi\_cfg.h}!SPI\_PORTS\_NUMBER@{SPI\_PORTS\_NUMBER}}
+\index{SPI\_PORTS\_NUMBER@{SPI\_PORTS\_NUMBER}!spi\_cfg.h@{spi\_cfg.h}}
+\doxysubsubsection{\texorpdfstring{SPI\_PORTS\_NUMBER}{SPI\_PORTS\_NUMBER}}
+{\footnotesize\ttfamily \#define SPI\+\_\+\+PORTS\+\_\+\+NUMBER~4U}
+
+Defines the number of ports on the processor. 
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{spi__cfg_8h_a3cb3dda1124db8846befff5be1bdfb2f}\label{spi__cfg_8h_a3cb3dda1124db8846befff5be1bdfb2f}} 
+\index{spi\_cfg.h@{spi\_cfg.h}!SpiBaudRate\_t@{SpiBaudRate\_t}}
+\index{SpiBaudRate\_t@{SpiBaudRate\_t}!spi\_cfg.h@{spi\_cfg.h}}
+\doxysubsubsection{\texorpdfstring{SpiBaudRate\_t}{SpiBaudRate\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{spi__cfg_8h_a3cb3dda1124db8846befff5be1bdfb2f}{Spi\+Baud\+Rate\+\_\+t}}}
+
+Define the baud rate control. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPI\_FPCLK2@{SPI\_FPCLK2}!spi\_cfg.h@{spi\_cfg.h}}\index{spi\_cfg.h@{spi\_cfg.h}!SPI\_FPCLK2@{SPI\_FPCLK2}}}\mbox{\Hypertarget{spi__cfg_8h_a3cb3dda1124db8846befff5be1bdfb2fae5cb9a0a4b196e9ec1681086178f43a5}\label{spi__cfg_8h_a3cb3dda1124db8846befff5be1bdfb2fae5cb9a0a4b196e9ec1681086178f43a5}} 
+SPI\+\_\+\+FPCLK2&Baud rate divided by 2 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPI\_FPCLK4@{SPI\_FPCLK4}!spi\_cfg.h@{spi\_cfg.h}}\index{spi\_cfg.h@{spi\_cfg.h}!SPI\_FPCLK4@{SPI\_FPCLK4}}}\mbox{\Hypertarget{spi__cfg_8h_a3cb3dda1124db8846befff5be1bdfb2fa8231bf0ac5d9725518ece77bfd9bec1e}\label{spi__cfg_8h_a3cb3dda1124db8846befff5be1bdfb2fa8231bf0ac5d9725518ece77bfd9bec1e}} 
+SPI\+\_\+\+FPCLK4&Baud rate divided by 4 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPI\_FPCLK8@{SPI\_FPCLK8}!spi\_cfg.h@{spi\_cfg.h}}\index{spi\_cfg.h@{spi\_cfg.h}!SPI\_FPCLK8@{SPI\_FPCLK8}}}\mbox{\Hypertarget{spi__cfg_8h_a3cb3dda1124db8846befff5be1bdfb2fa7c9d2a86e8941e0953c2ef0cd8a46bcb}\label{spi__cfg_8h_a3cb3dda1124db8846befff5be1bdfb2fa7c9d2a86e8941e0953c2ef0cd8a46bcb}} 
+SPI\+\_\+\+FPCLK8&Baud rate divided by 8 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPI\_FPCLK16@{SPI\_FPCLK16}!spi\_cfg.h@{spi\_cfg.h}}\index{spi\_cfg.h@{spi\_cfg.h}!SPI\_FPCLK16@{SPI\_FPCLK16}}}\mbox{\Hypertarget{spi__cfg_8h_a3cb3dda1124db8846befff5be1bdfb2fa4eda387d99095fe4123218eb38ce65a0}\label{spi__cfg_8h_a3cb3dda1124db8846befff5be1bdfb2fa4eda387d99095fe4123218eb38ce65a0}} 
+SPI\+\_\+\+FPCLK16&Baud rate divided by 16 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPI\_FPCLK32@{SPI\_FPCLK32}!spi\_cfg.h@{spi\_cfg.h}}\index{spi\_cfg.h@{spi\_cfg.h}!SPI\_FPCLK32@{SPI\_FPCLK32}}}\mbox{\Hypertarget{spi__cfg_8h_a3cb3dda1124db8846befff5be1bdfb2fa0d5c4f2cf613998bb015d70345b510e9}\label{spi__cfg_8h_a3cb3dda1124db8846befff5be1bdfb2fa0d5c4f2cf613998bb015d70345b510e9}} 
+SPI\+\_\+\+FPCLK32&Baud rate divided by 32 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPI\_FPCLK64@{SPI\_FPCLK64}!spi\_cfg.h@{spi\_cfg.h}}\index{spi\_cfg.h@{spi\_cfg.h}!SPI\_FPCLK64@{SPI\_FPCLK64}}}\mbox{\Hypertarget{spi__cfg_8h_a3cb3dda1124db8846befff5be1bdfb2fac8be4db7bdb1a09c825fad77b8d05380}\label{spi__cfg_8h_a3cb3dda1124db8846befff5be1bdfb2fac8be4db7bdb1a09c825fad77b8d05380}} 
+SPI\+\_\+\+FPCLK64&Baud rate divided by 64 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPI\_FPCLK128@{SPI\_FPCLK128}!spi\_cfg.h@{spi\_cfg.h}}\index{spi\_cfg.h@{spi\_cfg.h}!SPI\_FPCLK128@{SPI\_FPCLK128}}}\mbox{\Hypertarget{spi__cfg_8h_a3cb3dda1124db8846befff5be1bdfb2fa0259700cd228ebf08e669068d71fa9bd}\label{spi__cfg_8h_a3cb3dda1124db8846befff5be1bdfb2fa0259700cd228ebf08e669068d71fa9bd}} 
+SPI\+\_\+\+FPCLK128&Baud rate divided by 128 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPI\_FPCLK256@{SPI\_FPCLK256}!spi\_cfg.h@{spi\_cfg.h}}\index{spi\_cfg.h@{spi\_cfg.h}!SPI\_FPCLK256@{SPI\_FPCLK256}}}\mbox{\Hypertarget{spi__cfg_8h_a3cb3dda1124db8846befff5be1bdfb2fab1cbc24d1c799b53e5bd59c70585bef0}\label{spi__cfg_8h_a3cb3dda1124db8846befff5be1bdfb2fab1cbc24d1c799b53e5bd59c70585bef0}} 
+SPI\+\_\+\+FPCLK256&Baud rate divided by 256 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPI\_MAX\_FPCLK@{SPI\_MAX\_FPCLK}!spi\_cfg.h@{spi\_cfg.h}}\index{spi\_cfg.h@{spi\_cfg.h}!SPI\_MAX\_FPCLK@{SPI\_MAX\_FPCLK}}}\mbox{\Hypertarget{spi__cfg_8h_a3cb3dda1124db8846befff5be1bdfb2faced845e24384be571bfd19b049e054c3}\label{spi__cfg_8h_a3cb3dda1124db8846befff5be1bdfb2faced845e24384be571bfd19b049e054c3}} 
+SPI\+\_\+\+MAX\+\_\+\+FPCLK&Maximum baud rate \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{spi__cfg_8h_a8ed88c83798d221d2afb7ab8b4023faa}\label{spi__cfg_8h_a8ed88c83798d221d2afb7ab8b4023faa}} 
+\index{spi\_cfg.h@{spi\_cfg.h}!SpiChannel\_t@{SpiChannel\_t}}
+\index{SpiChannel\_t@{SpiChannel\_t}!spi\_cfg.h@{spi\_cfg.h}}
+\doxysubsubsection{\texorpdfstring{SpiChannel\_t}{SpiChannel\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{spi__cfg_8h_a8ed88c83798d221d2afb7ab8b4023faa}{Spi\+Channel\+\_\+t}}}
+
+Define the SPI channels on the MCU device. It is used to specify SPI channel to configure the register map. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPI\_CHANNEL1@{SPI\_CHANNEL1}!spi\_cfg.h@{spi\_cfg.h}}\index{spi\_cfg.h@{spi\_cfg.h}!SPI\_CHANNEL1@{SPI\_CHANNEL1}}}\mbox{\Hypertarget{spi__cfg_8h_a8ed88c83798d221d2afb7ab8b4023faaae01f25f2493c2b0a1406ee1371a2752d}\label{spi__cfg_8h_a8ed88c83798d221d2afb7ab8b4023faaae01f25f2493c2b0a1406ee1371a2752d}} 
+SPI\+\_\+\+CHANNEL1&SPI Channel 1 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPI\_CHANNEL2@{SPI\_CHANNEL2}!spi\_cfg.h@{spi\_cfg.h}}\index{spi\_cfg.h@{spi\_cfg.h}!SPI\_CHANNEL2@{SPI\_CHANNEL2}}}\mbox{\Hypertarget{spi__cfg_8h_a8ed88c83798d221d2afb7ab8b4023faaa4acd0d9734887e78aa4c50dfc78fcbfa}\label{spi__cfg_8h_a8ed88c83798d221d2afb7ab8b4023faaa4acd0d9734887e78aa4c50dfc78fcbfa}} 
+SPI\+\_\+\+CHANNEL2&SPI Channel 2 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPI\_CHANNEL3@{SPI\_CHANNEL3}!spi\_cfg.h@{spi\_cfg.h}}\index{spi\_cfg.h@{spi\_cfg.h}!SPI\_CHANNEL3@{SPI\_CHANNEL3}}}\mbox{\Hypertarget{spi__cfg_8h_a8ed88c83798d221d2afb7ab8b4023faaa1b7e43cfe92e1412fc1d13622e099a6f}\label{spi__cfg_8h_a8ed88c83798d221d2afb7ab8b4023faaa1b7e43cfe92e1412fc1d13622e099a6f}} 
+SPI\+\_\+\+CHANNEL3&SPI Channel 3 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPI\_CHANNEL4@{SPI\_CHANNEL4}!spi\_cfg.h@{spi\_cfg.h}}\index{spi\_cfg.h@{spi\_cfg.h}!SPI\_CHANNEL4@{SPI\_CHANNEL4}}}\mbox{\Hypertarget{spi__cfg_8h_a8ed88c83798d221d2afb7ab8b4023faaaad41df2ed0eb35b857f48bd36cf9f91e}\label{spi__cfg_8h_a8ed88c83798d221d2afb7ab8b4023faaaad41df2ed0eb35b857f48bd36cf9f91e}} 
+SPI\+\_\+\+CHANNEL4&SPI Channel 4 \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{spi__cfg_8h_abcc4f72e578adda03140d4dd9e459eba}\label{spi__cfg_8h_abcc4f72e578adda03140d4dd9e459eba}} 
+\index{spi\_cfg.h@{spi\_cfg.h}!SpiDataSize\_t@{SpiDataSize\_t}}
+\index{SpiDataSize\_t@{SpiDataSize\_t}!spi\_cfg.h@{spi\_cfg.h}}
+\doxysubsubsection{\texorpdfstring{SpiDataSize\_t}{SpiDataSize\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{spi__cfg_8h_abcc4f72e578adda03140d4dd9e459eba}{Spi\+Data\+Size\+\_\+t}}}
+
+Define the data frame format. Set bits number of data. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPI\_8BITS@{SPI\_8BITS}!spi\_cfg.h@{spi\_cfg.h}}\index{spi\_cfg.h@{spi\_cfg.h}!SPI\_8BITS@{SPI\_8BITS}}}\mbox{\Hypertarget{spi__cfg_8h_abcc4f72e578adda03140d4dd9e459ebaa7d0f3f931e11690790cd430da3023142}\label{spi__cfg_8h_abcc4f72e578adda03140d4dd9e459ebaa7d0f3f931e11690790cd430da3023142}} 
+SPI\+\_\+8\+BITS&8 bits data is selected for communication \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPI\_16BITS@{SPI\_16BITS}!spi\_cfg.h@{spi\_cfg.h}}\index{spi\_cfg.h@{spi\_cfg.h}!SPI\_16BITS@{SPI\_16BITS}}}\mbox{\Hypertarget{spi__cfg_8h_abcc4f72e578adda03140d4dd9e459ebaa43039bc9dc6d36ddb07d5565ddff0cf2}\label{spi__cfg_8h_abcc4f72e578adda03140d4dd9e459ebaa43039bc9dc6d36ddb07d5565ddff0cf2}} 
+SPI\+\_\+16\+BITS&16 bits data is selected for communication \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{spi__cfg_8h_ad0d0fad64f9813e5853f46b5bc1a3af9}\label{spi__cfg_8h_ad0d0fad64f9813e5853f46b5bc1a3af9}} 
+\index{spi\_cfg.h@{spi\_cfg.h}!SpiFrameFormat\_t@{SpiFrameFormat\_t}}
+\index{SpiFrameFormat\_t@{SpiFrameFormat\_t}!spi\_cfg.h@{spi\_cfg.h}}
+\doxysubsubsection{\texorpdfstring{SpiFrameFormat\_t}{SpiFrameFormat\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{spi__cfg_8h_ad0d0fad64f9813e5853f46b5bc1a3af9}{Spi\+Frame\+Format\+\_\+t}}}
+
+Define the frame format. Choose the direction of the data frame to be sent. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPI\_MSB@{SPI\_MSB}!spi\_cfg.h@{spi\_cfg.h}}\index{spi\_cfg.h@{spi\_cfg.h}!SPI\_MSB@{SPI\_MSB}}}\mbox{\Hypertarget{spi__cfg_8h_ad0d0fad64f9813e5853f46b5bc1a3af9a1eae4fe3047bf4fbef593e1d39562f45}\label{spi__cfg_8h_ad0d0fad64f9813e5853f46b5bc1a3af9a1eae4fe3047bf4fbef593e1d39562f45}} 
+SPI\+\_\+\+MSB&Most significant bit transmitted first \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPI\_LSB@{SPI\_LSB}!spi\_cfg.h@{spi\_cfg.h}}\index{spi\_cfg.h@{spi\_cfg.h}!SPI\_LSB@{SPI\_LSB}}}\mbox{\Hypertarget{spi__cfg_8h_ad0d0fad64f9813e5853f46b5bc1a3af9a97ce763136b0802785b49cf4d507e1b0}\label{spi__cfg_8h_ad0d0fad64f9813e5853f46b5bc1a3af9a97ce763136b0802785b49cf4d507e1b0}} 
+SPI\+\_\+\+LSB&Less significant bit transmitted first \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPI\_MAX\_FF@{SPI\_MAX\_FF}!spi\_cfg.h@{spi\_cfg.h}}\index{spi\_cfg.h@{spi\_cfg.h}!SPI\_MAX\_FF@{SPI\_MAX\_FF}}}\mbox{\Hypertarget{spi__cfg_8h_ad0d0fad64f9813e5853f46b5bc1a3af9a5485b226c3fe8c379549db70f1a821e2}\label{spi__cfg_8h_ad0d0fad64f9813e5853f46b5bc1a3af9a5485b226c3fe8c379549db70f1a821e2}} 
+SPI\+\_\+\+MAX\+\_\+\+FF&Maximum frame format \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{spi__cfg_8h_a402dd0baa9458df07d91ef47836ffe47}\label{spi__cfg_8h_a402dd0baa9458df07d91ef47836ffe47}} 
+\index{spi\_cfg.h@{spi\_cfg.h}!SpiHierarchy\_t@{SpiHierarchy\_t}}
+\index{SpiHierarchy\_t@{SpiHierarchy\_t}!spi\_cfg.h@{spi\_cfg.h}}
+\doxysubsubsection{\texorpdfstring{SpiHierarchy\_t}{SpiHierarchy\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{spi__cfg_8h_a402dd0baa9458df07d91ef47836ffe47}{Spi\+Hierarchy\+\_\+t}}}
+
+Define the hierarchy of the device. Set the device as slave or master. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPI\_SLAVE@{SPI\_SLAVE}!spi\_cfg.h@{spi\_cfg.h}}\index{spi\_cfg.h@{spi\_cfg.h}!SPI\_SLAVE@{SPI\_SLAVE}}}\mbox{\Hypertarget{spi__cfg_8h_a402dd0baa9458df07d91ef47836ffe47abc98c1546fe12d3fceb1f86cf670faa9}\label{spi__cfg_8h_a402dd0baa9458df07d91ef47836ffe47abc98c1546fe12d3fceb1f86cf670faa9}} 
+SPI\+\_\+\+SLAVE&Slave configuration \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPI\_MASTER@{SPI\_MASTER}!spi\_cfg.h@{spi\_cfg.h}}\index{spi\_cfg.h@{spi\_cfg.h}!SPI\_MASTER@{SPI\_MASTER}}}\mbox{\Hypertarget{spi__cfg_8h_a402dd0baa9458df07d91ef47836ffe47a84379dc90398ca075038c8d5ee465f6a}\label{spi__cfg_8h_a402dd0baa9458df07d91ef47836ffe47a84379dc90398ca075038c8d5ee465f6a}} 
+SPI\+\_\+\+MASTER&Master configuration \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPI\_MAX\_HIERARCHY@{SPI\_MAX\_HIERARCHY}!spi\_cfg.h@{spi\_cfg.h}}\index{spi\_cfg.h@{spi\_cfg.h}!SPI\_MAX\_HIERARCHY@{SPI\_MAX\_HIERARCHY}}}\mbox{\Hypertarget{spi__cfg_8h_a402dd0baa9458df07d91ef47836ffe47a74f9bb6b6dcadbd87ebf9e0639eea22b}\label{spi__cfg_8h_a402dd0baa9458df07d91ef47836ffe47a74f9bb6b6dcadbd87ebf9e0639eea22b}} 
+SPI\+\_\+\+MAX\+\_\+\+HIERARCHY&Maximum hierarchy \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{spi__cfg_8h_af7fd666f01e1a2fe00c42b85eaa3bf4d}\label{spi__cfg_8h_af7fd666f01e1a2fe00c42b85eaa3bf4d}} 
+\index{spi\_cfg.h@{spi\_cfg.h}!SpiMode\_t@{SpiMode\_t}}
+\index{SpiMode\_t@{SpiMode\_t}!spi\_cfg.h@{spi\_cfg.h}}
+\doxysubsubsection{\texorpdfstring{SpiMode\_t}{SpiMode\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{spi__cfg_8h_af7fd666f01e1a2fe00c42b85eaa3bf4d}{Spi\+Mode\+\_\+t}}}
+
+Define the bus mode according to clock polarity and clock phase. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPI\_MODE0@{SPI\_MODE0}!spi\_cfg.h@{spi\_cfg.h}}\index{spi\_cfg.h@{spi\_cfg.h}!SPI\_MODE0@{SPI\_MODE0}}}\mbox{\Hypertarget{spi__cfg_8h_af7fd666f01e1a2fe00c42b85eaa3bf4daacf2eef6aadb9f0de11862660cd9ade6}\label{spi__cfg_8h_af7fd666f01e1a2fe00c42b85eaa3bf4daacf2eef6aadb9f0de11862660cd9ade6}} 
+SPI\+\_\+\+MODE0&Mode 0 (CPOL=0 and CPHA=0) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPI\_MODE1@{SPI\_MODE1}!spi\_cfg.h@{spi\_cfg.h}}\index{spi\_cfg.h@{spi\_cfg.h}!SPI\_MODE1@{SPI\_MODE1}}}\mbox{\Hypertarget{spi__cfg_8h_af7fd666f01e1a2fe00c42b85eaa3bf4dabd92ab028fcac05cf2ed27b4838d1590}\label{spi__cfg_8h_af7fd666f01e1a2fe00c42b85eaa3bf4dabd92ab028fcac05cf2ed27b4838d1590}} 
+SPI\+\_\+\+MODE1&Mode 1 (CPOL=0 and CPHA=1) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPI\_MODE2@{SPI\_MODE2}!spi\_cfg.h@{spi\_cfg.h}}\index{spi\_cfg.h@{spi\_cfg.h}!SPI\_MODE2@{SPI\_MODE2}}}\mbox{\Hypertarget{spi__cfg_8h_af7fd666f01e1a2fe00c42b85eaa3bf4da2607e91fc0c8ae3334284808d7f94cf5}\label{spi__cfg_8h_af7fd666f01e1a2fe00c42b85eaa3bf4da2607e91fc0c8ae3334284808d7f94cf5}} 
+SPI\+\_\+\+MODE2&Mode 2 (CPOL=1 and CPHA=0) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPI\_MODE3@{SPI\_MODE3}!spi\_cfg.h@{spi\_cfg.h}}\index{spi\_cfg.h@{spi\_cfg.h}!SPI\_MODE3@{SPI\_MODE3}}}\mbox{\Hypertarget{spi__cfg_8h_af7fd666f01e1a2fe00c42b85eaa3bf4dad9636eac0759655110aa77dd6c22da6c}\label{spi__cfg_8h_af7fd666f01e1a2fe00c42b85eaa3bf4dad9636eac0759655110aa77dd6c22da6c}} 
+SPI\+\_\+\+MODE3&Mode 3 (CPOL=1 and CPHA=1) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPI\_MAX\_MODE@{SPI\_MAX\_MODE}!spi\_cfg.h@{spi\_cfg.h}}\index{spi\_cfg.h@{spi\_cfg.h}!SPI\_MAX\_MODE@{SPI\_MAX\_MODE}}}\mbox{\Hypertarget{spi__cfg_8h_af7fd666f01e1a2fe00c42b85eaa3bf4da0b45ed1f5218bc73fa94541b4aac2ae8}\label{spi__cfg_8h_af7fd666f01e1a2fe00c42b85eaa3bf4da0b45ed1f5218bc73fa94541b4aac2ae8}} 
+SPI\+\_\+\+MAX\+\_\+\+MODE&Maximum mode \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{spi__cfg_8h_a474aab4df5cccbad97f07bffe96dfb34}\label{spi__cfg_8h_a474aab4df5cccbad97f07bffe96dfb34}} 
+\index{spi\_cfg.h@{spi\_cfg.h}!SpiSlaveSelect\_t@{SpiSlaveSelect\_t}}
+\index{SpiSlaveSelect\_t@{SpiSlaveSelect\_t}!spi\_cfg.h@{spi\_cfg.h}}
+\doxysubsubsection{\texorpdfstring{SpiSlaveSelect\_t}{SpiSlaveSelect\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{spi__cfg_8h_a474aab4df5cccbad97f07bffe96dfb34}{Spi\+Slave\+Select\+\_\+t}}}
+
+Define the slave select pin management (NSS input). The slave ~\newline
+ selector could be configured by software or hardware. SW\+\_\+\+NSS\+: Slave select is driven internally. NSS pin remains free. HW\+\_\+\+NSS\+\_\+\+ENABLED\+: Device operates in master mode (NSS pin is used). HW\+\_\+\+NSS\+\_\+\+DISABLED\+: Device operates in slave mode (NSS pin is used). \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SOFTWARE\_NSS@{SOFTWARE\_NSS}!spi\_cfg.h@{spi\_cfg.h}}\index{spi\_cfg.h@{spi\_cfg.h}!SOFTWARE\_NSS@{SOFTWARE\_NSS}}}\mbox{\Hypertarget{spi__cfg_8h_a474aab4df5cccbad97f07bffe96dfb34a9f2f0be2769400d90f74adacbc3db246}\label{spi__cfg_8h_a474aab4df5cccbad97f07bffe96dfb34a9f2f0be2769400d90f74adacbc3db246}} 
+SOFTWARE\+\_\+\+NSS&Software NSS pin management \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HARDWARE\_NSS\_ENABLED@{HARDWARE\_NSS\_ENABLED}!spi\_cfg.h@{spi\_cfg.h}}\index{spi\_cfg.h@{spi\_cfg.h}!HARDWARE\_NSS\_ENABLED@{HARDWARE\_NSS\_ENABLED}}}\mbox{\Hypertarget{spi__cfg_8h_a474aab4df5cccbad97f07bffe96dfb34a21040ae68209a0a22c86e627d17b7778}\label{spi__cfg_8h_a474aab4df5cccbad97f07bffe96dfb34a21040ae68209a0a22c86e627d17b7778}} 
+HARDWARE\+\_\+\+NSS\+\_\+\+ENABLED&Hardware NSS pin management (Master) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HARDWARE\_NSS\_DISABLED@{HARDWARE\_NSS\_DISABLED}!spi\_cfg.h@{spi\_cfg.h}}\index{spi\_cfg.h@{spi\_cfg.h}!HARDWARE\_NSS\_DISABLED@{HARDWARE\_NSS\_DISABLED}}}\mbox{\Hypertarget{spi__cfg_8h_a474aab4df5cccbad97f07bffe96dfb34a354f1da6f400e644c45ba8b28d26df16}\label{spi__cfg_8h_a474aab4df5cccbad97f07bffe96dfb34a354f1da6f400e644c45ba8b28d26df16}} 
+HARDWARE\+\_\+\+NSS\+\_\+\+DISABLED&Hardware NSS pin management (slave) \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{spi__cfg_8h_ad62f9d63a1ab4982d18a733bec771326}\label{spi__cfg_8h_ad62f9d63a1ab4982d18a733bec771326}} 
+\index{spi\_cfg.h@{spi\_cfg.h}!SpiTypeTransfer\_t@{SpiTypeTransfer\_t}}
+\index{SpiTypeTransfer\_t@{SpiTypeTransfer\_t}!spi\_cfg.h@{spi\_cfg.h}}
+\doxysubsubsection{\texorpdfstring{SpiTypeTransfer\_t}{SpiTypeTransfer\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{spi__cfg_8h_ad62f9d63a1ab4982d18a733bec771326}{Spi\+Type\+Transfer\+\_\+t}}}
+
+Define the type of data transfer. ~\newline
+ \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPI\_FULL\_DUPLEX@{SPI\_FULL\_DUPLEX}!spi\_cfg.h@{spi\_cfg.h}}\index{spi\_cfg.h@{spi\_cfg.h}!SPI\_FULL\_DUPLEX@{SPI\_FULL\_DUPLEX}}}\mbox{\Hypertarget{spi__cfg_8h_ad62f9d63a1ab4982d18a733bec771326ab90ebf6910c1da04cfe4fe611b46866f}\label{spi__cfg_8h_ad62f9d63a1ab4982d18a733bec771326ab90ebf6910c1da04cfe4fe611b46866f}} 
+SPI\+\_\+\+FULL\+\_\+\+DUPLEX&Set full duplex communication \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPI\_RECEIVE\_MODE@{SPI\_RECEIVE\_MODE}!spi\_cfg.h@{spi\_cfg.h}}\index{spi\_cfg.h@{spi\_cfg.h}!SPI\_RECEIVE\_MODE@{SPI\_RECEIVE\_MODE}}}\mbox{\Hypertarget{spi__cfg_8h_ad62f9d63a1ab4982d18a733bec771326abc167d862cc6ea23a7b5ac40730b6e5f}\label{spi__cfg_8h_ad62f9d63a1ab4982d18a733bec771326abc167d862cc6ea23a7b5ac40730b6e5f}} 
+SPI\+\_\+\+RECEIVE\+\_\+\+MODE&Set Receive only communication \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPI\_MAX\_DF@{SPI\_MAX\_DF}!spi\_cfg.h@{spi\_cfg.h}}\index{spi\_cfg.h@{spi\_cfg.h}!SPI\_MAX\_DF@{SPI\_MAX\_DF}}}\mbox{\Hypertarget{spi__cfg_8h_ad62f9d63a1ab4982d18a733bec771326ab5734c4b18de17cd5bc54a57bc463ace}\label{spi__cfg_8h_ad62f9d63a1ab4982d18a733bec771326ab5734c4b18de17cd5bc54a57bc463ace}} 
+SPI\+\_\+\+MAX\+\_\+\+DF&Set the maximum data transfer \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{spi__cfg_8h_a72af5b1b28647c0f42591ecd067fccb9}\label{spi__cfg_8h_a72af5b1b28647c0f42591ecd067fccb9}} 
+\index{spi\_cfg.h@{spi\_cfg.h}!SPI\_ConfigGet@{SPI\_ConfigGet}}
+\index{SPI\_ConfigGet@{SPI\_ConfigGet}!spi\_cfg.h@{spi\_cfg.h}}
+\doxysubsubsection{\texorpdfstring{SPI\_ConfigGet()}{SPI\_ConfigGet()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_spi_config__t}{Spi\+Config\+\_\+t}} $\ast$const SPI\+\_\+\+Config\+Get (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+{\bfseries{Description\+:}} This function is used to initialize the SPI based on the configuration table defined in spi\+\_\+cfg module.
+
+PRE-\/\+CONDITION\+: configuration table needs to be populated (sizeof \texorpdfstring{$>$}{>} 0) POST-\/\+CONDITION\+: A constant pointer to the first member of the ~\newline
+ configuration table will be returned. \begin{DoxyReturn}{Returns}
+A pointer to the configuration table.
+\end{DoxyReturn}
+{\bfseries{Example\+:}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_spi_config__t}{SpiConfig\_t}}\ *\ \textcolor{keyword}{const}\ \mbox{\hyperlink{spi__cfg_8c_a19dbdd2a49e995603d1f6506823d2f84}{SpiConfig}}\ =\ \mbox{\hyperlink{spi__cfg_8c_a72af5b1b28647c0f42591ecd067fccb9}{SPI\_ConfigGet}}();}
+\DoxyCodeLine{}
+\DoxyCodeLine{SPI\_Init(\mbox{\hyperlink{spi__cfg_8c_a19dbdd2a49e995603d1f6506823d2f84}{SpiConfig}});}
+
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{spi__cfg_8c_a72af5b1b28647c0f42591ecd067fccb9}{SPI\+\_\+\+Config\+Get}} 
+
+SPI\+\_\+\+Init 
+
+SPI\+\_\+\+Transfer 
+
+SPI\+\_\+\+Register\+Write 
+
+SPI\+\_\+\+Register\+Read 
+
+SPI\+\_\+\+Callback\+Register 
+\end{DoxySeeAlso}

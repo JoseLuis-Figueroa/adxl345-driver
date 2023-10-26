@@ -1,0 +1,111 @@
+\hypertarget{spi__cfg_8h_source}{}\doxysection{spi\+\_\+cfg.\+h}
+\label{spi__cfg_8h_source}\index{C:/Users/figue/Documents/2.Electronics/1.Embedded\_Systems/STM32/Bare\_Metal/Boards/Nucleo\_F401RE/Projects/adxl345-\/driver/adxl345\_code/include/spi\_cfg.h@{C:/Users/figue/Documents/2.Electronics/1.Embedded\_Systems/STM32/Bare\_Metal/Boards/Nucleo\_F401RE/Projects/adxl345-\/driver/adxl345\_code/include/spi\_cfg.h}}
+\mbox{\hyperlink{spi__cfg_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#ifndef\ SPI\_CFG\_H\_}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ SPI\_CFG\_H\_}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{comment}{/**********************************************************************}}
+\DoxyCodeLine{00018\ \textcolor{comment}{*\ Preprocessor\ Constants}}
+\DoxyCodeLine{00019\ \textcolor{comment}{**********************************************************************/}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#define\ SPI\_PORTS\_NUMBER\ 4U}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#define\ SPI\_CHANNELS\_NUMBER\ 1}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{comment}{/**********************************************************************}}
+\DoxyCodeLine{00032\ \textcolor{comment}{*\ Typedefs}}
+\DoxyCodeLine{00033\ \textcolor{comment}{**********************************************************************/}}
+\DoxyCodeLine{00038\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00039\ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{spi__cfg_8h_a8ed88c83798d221d2afb7ab8b4023faaae01f25f2493c2b0a1406ee1371a2752d}{SPI\_CHANNEL1}},\ \ \ }
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{spi__cfg_8h_a8ed88c83798d221d2afb7ab8b4023faaa4acd0d9734887e78aa4c50dfc78fcbfa}{SPI\_CHANNEL2}},\ \ \ }
+\DoxyCodeLine{00042\ \ \ \ \ \mbox{\hyperlink{spi__cfg_8h_a8ed88c83798d221d2afb7ab8b4023faaa1b7e43cfe92e1412fc1d13622e099a6f}{SPI\_CHANNEL3}},\ \ \ }
+\DoxyCodeLine{00043\ \ \ \ \ \mbox{\hyperlink{spi__cfg_8h_a8ed88c83798d221d2afb7ab8b4023faaaad41df2ed0eb35b857f48bd36cf9f91e}{SPI\_CHANNEL4}}\ \ \ \ }
+\DoxyCodeLine{00044\ \}\mbox{\hyperlink{spi__cfg_8h_a8ed88c83798d221d2afb7ab8b4023faa}{SpiChannel\_t}};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00049\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00050\ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \mbox{\hyperlink{spi__cfg_8h_af7fd666f01e1a2fe00c42b85eaa3bf4daacf2eef6aadb9f0de11862660cd9ade6}{SPI\_MODE0}},\ \ \ \ \ \ }
+\DoxyCodeLine{00052\ \ \ \ \ \mbox{\hyperlink{spi__cfg_8h_af7fd666f01e1a2fe00c42b85eaa3bf4dabd92ab028fcac05cf2ed27b4838d1590}{SPI\_MODE1}},\ \ \ \ \ \ }
+\DoxyCodeLine{00053\ \ \ \ \ \mbox{\hyperlink{spi__cfg_8h_af7fd666f01e1a2fe00c42b85eaa3bf4da2607e91fc0c8ae3334284808d7f94cf5}{SPI\_MODE2}},\ \ \ \ \ \ }
+\DoxyCodeLine{00054\ \ \ \ \ \mbox{\hyperlink{spi__cfg_8h_af7fd666f01e1a2fe00c42b85eaa3bf4dad9636eac0759655110aa77dd6c22da6c}{SPI\_MODE3}},\ \ \ \ \ \ }
+\DoxyCodeLine{00055\ \ \ \ \ \mbox{\hyperlink{spi__cfg_8h_af7fd666f01e1a2fe00c42b85eaa3bf4da0b45ed1f5218bc73fa94541b4aac2ae8}{SPI\_MAX\_MODE}}\ \ \ \ }
+\DoxyCodeLine{00056\ \}\mbox{\hyperlink{spi__cfg_8h_af7fd666f01e1a2fe00c42b85eaa3bf4d}{SpiMode\_t}};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00062\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00063\ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \mbox{\hyperlink{spi__cfg_8h_a402dd0baa9458df07d91ef47836ffe47abc98c1546fe12d3fceb1f86cf670faa9}{SPI\_SLAVE}},\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00065\ \ \ \ \ \mbox{\hyperlink{spi__cfg_8h_a402dd0baa9458df07d91ef47836ffe47a84379dc90398ca075038c8d5ee465f6a}{SPI\_MASTER}},\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00066\ \ \ \ \ \mbox{\hyperlink{spi__cfg_8h_a402dd0baa9458df07d91ef47836ffe47a74f9bb6b6dcadbd87ebf9e0639eea22b}{SPI\_MAX\_HIERARCHY}}\ \ \ }
+\DoxyCodeLine{00067\ \}\mbox{\hyperlink{spi__cfg_8h_a402dd0baa9458df07d91ef47836ffe47}{SpiHierarchy\_t}};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00072\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00073\ \{}
+\DoxyCodeLine{00074\ \ \ \ \ \mbox{\hyperlink{spi__cfg_8h_a3cb3dda1124db8846befff5be1bdfb2fae5cb9a0a4b196e9ec1681086178f43a5}{SPI\_FPCLK2}},\ \ \ \ \ }
+\DoxyCodeLine{00075\ \ \ \ \ \mbox{\hyperlink{spi__cfg_8h_a3cb3dda1124db8846befff5be1bdfb2fa8231bf0ac5d9725518ece77bfd9bec1e}{SPI\_FPCLK4}},\ \ \ \ \ }
+\DoxyCodeLine{00076\ \ \ \ \ \mbox{\hyperlink{spi__cfg_8h_a3cb3dda1124db8846befff5be1bdfb2fa7c9d2a86e8941e0953c2ef0cd8a46bcb}{SPI\_FPCLK8}},\ \ \ \ \ }
+\DoxyCodeLine{00077\ \ \ \ \ \mbox{\hyperlink{spi__cfg_8h_a3cb3dda1124db8846befff5be1bdfb2fa4eda387d99095fe4123218eb38ce65a0}{SPI\_FPCLK16}},\ \ \ \ }
+\DoxyCodeLine{00078\ \ \ \ \ \mbox{\hyperlink{spi__cfg_8h_a3cb3dda1124db8846befff5be1bdfb2fa0d5c4f2cf613998bb015d70345b510e9}{SPI\_FPCLK32}},\ \ \ \ }
+\DoxyCodeLine{00079\ \ \ \ \ \mbox{\hyperlink{spi__cfg_8h_a3cb3dda1124db8846befff5be1bdfb2fac8be4db7bdb1a09c825fad77b8d05380}{SPI\_FPCLK64}},\ \ \ \ }
+\DoxyCodeLine{00080\ \ \ \ \ \mbox{\hyperlink{spi__cfg_8h_a3cb3dda1124db8846befff5be1bdfb2fa0259700cd228ebf08e669068d71fa9bd}{SPI\_FPCLK128}},\ \ \ }
+\DoxyCodeLine{00081\ \ \ \ \ \mbox{\hyperlink{spi__cfg_8h_a3cb3dda1124db8846befff5be1bdfb2fab1cbc24d1c799b53e5bd59c70585bef0}{SPI\_FPCLK256}},\ \ \ }
+\DoxyCodeLine{00082\ \ \ \ \ \mbox{\hyperlink{spi__cfg_8h_a3cb3dda1124db8846befff5be1bdfb2faced845e24384be571bfd19b049e054c3}{SPI\_MAX\_FPCLK}}\ \ \ }
+\DoxyCodeLine{00083\ \}\mbox{\hyperlink{spi__cfg_8h_a3cb3dda1124db8846befff5be1bdfb2f}{SpiBaudRate\_t}};}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00092\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00093\ \{}
+\DoxyCodeLine{00094\ \ \ \ \ \mbox{\hyperlink{spi__cfg_8h_a474aab4df5cccbad97f07bffe96dfb34a9f2f0be2769400d90f74adacbc3db246}{SOFTWARE\_NSS}},\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00095\ \ \ \ \ \mbox{\hyperlink{spi__cfg_8h_a474aab4df5cccbad97f07bffe96dfb34a21040ae68209a0a22c86e627d17b7778}{HARDWARE\_NSS\_ENABLED}},\ \ \ }
+\DoxyCodeLine{00096\ \ \ \ \ \mbox{\hyperlink{spi__cfg_8h_a474aab4df5cccbad97f07bffe96dfb34a354f1da6f400e644c45ba8b28d26df16}{HARDWARE\_NSS\_DISABLED}}\ \ \ }
+\DoxyCodeLine{00097\ \}\mbox{\hyperlink{spi__cfg_8h_a474aab4df5cccbad97f07bffe96dfb34}{SpiSlaveSelect\_t}};}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00103\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00104\ \{}
+\DoxyCodeLine{00105\ \ \ \ \ \mbox{\hyperlink{spi__cfg_8h_ad0d0fad64f9813e5853f46b5bc1a3af9a1eae4fe3047bf4fbef593e1d39562f45}{SPI\_MSB}},\ \ \ \ }
+\DoxyCodeLine{00106\ \ \ \ \ \mbox{\hyperlink{spi__cfg_8h_ad0d0fad64f9813e5853f46b5bc1a3af9a97ce763136b0802785b49cf4d507e1b0}{SPI\_LSB}},\ \ \ \ }
+\DoxyCodeLine{00107\ \ \ \ \ \mbox{\hyperlink{spi__cfg_8h_ad0d0fad64f9813e5853f46b5bc1a3af9a5485b226c3fe8c379549db70f1a821e2}{SPI\_MAX\_FF}}\ \ }
+\DoxyCodeLine{00108\ \}\mbox{\hyperlink{spi__cfg_8h_ad0d0fad64f9813e5853f46b5bc1a3af9}{SpiFrameFormat\_t}};}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00113\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00114\ \{}
+\DoxyCodeLine{00115\ \ \ \ \ \mbox{\hyperlink{spi__cfg_8h_ad62f9d63a1ab4982d18a733bec771326ab90ebf6910c1da04cfe4fe611b46866f}{SPI\_FULL\_DUPLEX}},\ \ \ \ }
+\DoxyCodeLine{00116\ \ \ \ \ \mbox{\hyperlink{spi__cfg_8h_ad62f9d63a1ab4982d18a733bec771326abc167d862cc6ea23a7b5ac40730b6e5f}{SPI\_RECEIVE\_MODE}},\ \ \ }
+\DoxyCodeLine{00117\ \ \ \ \ \mbox{\hyperlink{spi__cfg_8h_ad62f9d63a1ab4982d18a733bec771326ab5734c4b18de17cd5bc54a57bc463ace}{SPI\_MAX\_DF}}\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00118\ \}\mbox{\hyperlink{spi__cfg_8h_ad62f9d63a1ab4982d18a733bec771326}{SpiTypeTransfer\_t}};}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00123\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}}
+\DoxyCodeLine{00124\ \{}
+\DoxyCodeLine{00125\ \ \ \ \ \mbox{\hyperlink{spi__cfg_8h_abcc4f72e578adda03140d4dd9e459ebaa7d0f3f931e11690790cd430da3023142}{SPI\_8BITS}},\ \ }
+\DoxyCodeLine{00126\ \ \ \ \ \mbox{\hyperlink{spi__cfg_8h_abcc4f72e578adda03140d4dd9e459ebaa43039bc9dc6d36ddb07d5565ddff0cf2}{SPI\_16BITS}}\ \ }
+\DoxyCodeLine{00127\ \}\mbox{\hyperlink{spi__cfg_8h_abcc4f72e578adda03140d4dd9e459eba}{SpiDataSize\_t}};}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00133\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00134\ \{}
+\DoxyCodeLine{00135\ \ \ \ \ \mbox{\hyperlink{spi__cfg_8h_a8ed88c83798d221d2afb7ab8b4023faa}{SpiChannel\_t}}\ \mbox{\hyperlink{struct_spi_config__t_ac3308e3c6c7708c3159be2c53f39b6db}{Channel}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00136\ \ \ \ \ \mbox{\hyperlink{spi__cfg_8h_af7fd666f01e1a2fe00c42b85eaa3bf4d}{SpiMode\_t}}\ \mbox{\hyperlink{struct_spi_config__t_a4aa637f9662875e082b754682f334020}{Mode}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00137\ \ \ \ \ \mbox{\hyperlink{spi__cfg_8h_a402dd0baa9458df07d91ef47836ffe47}{SpiHierarchy\_t}}\ \mbox{\hyperlink{struct_spi_config__t_a8d2bf715b889882728d44105ee67ba96}{Hierarchy}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00138\ \ \ \ \ \mbox{\hyperlink{spi__cfg_8h_a3cb3dda1124db8846befff5be1bdfb2f}{SpiBaudRate\_t}}\ \mbox{\hyperlink{struct_spi_config__t_a94b53834745394450ace1257b0616244}{BaudRate}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00139\ \ \ \ \ \mbox{\hyperlink{spi__cfg_8h_a474aab4df5cccbad97f07bffe96dfb34}{SpiSlaveSelect\_t}}\ \mbox{\hyperlink{struct_spi_config__t_accae91a66acc25a5decc4708d33d3b9f}{SlaveSelect}};\ \ \ }
+\DoxyCodeLine{00140\ \ \ \ \ \mbox{\hyperlink{spi__cfg_8h_ad0d0fad64f9813e5853f46b5bc1a3af9}{SpiFrameFormat\_t}}\ \mbox{\hyperlink{struct_spi_config__t_a1bd6757ba477e3bd20b2829e49b04e85}{FrameFormat}};\ \ \ }
+\DoxyCodeLine{00141\ \ \ \ \ \mbox{\hyperlink{spi__cfg_8h_ad62f9d63a1ab4982d18a733bec771326}{SpiTypeTransfer\_t}}\ \mbox{\hyperlink{struct_spi_config__t_ae0bf2ae2988b2136e52d7c69750a3bb8}{TypeTransfer}};\ }
+\DoxyCodeLine{00142\ \ \ \ \ \mbox{\hyperlink{spi__cfg_8h_abcc4f72e578adda03140d4dd9e459eba}{SpiDataSize\_t}}\ \mbox{\hyperlink{struct_spi_config__t_a22e68df989d2e7c1708e7ca1b4df16d3}{DataSize}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00143\ \}\mbox{\hyperlink{struct_spi_config__t}{SpiConfig\_t}};}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00146\ \textcolor{comment}{/**********************************************************************}}
+\DoxyCodeLine{00147\ \textcolor{comment}{*\ Function\ Prototypes}}
+\DoxyCodeLine{00148\ \textcolor{comment}{**********************************************************************/}}
+\DoxyCodeLine{00149\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00150\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\{}
+\DoxyCodeLine{00151\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00153\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_spi_config__t}{SpiConfig\_t}}\ *\ \textcolor{keyword}{const}\ \mbox{\hyperlink{spi__cfg_8h_a72af5b1b28647c0f42591ecd067fccb9}{SPI\_ConfigGet}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00155\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00156\ \}\ \textcolor{comment}{//extern\ "{}C"{}}}
+\DoxyCodeLine{00157\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00159\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{/*SPI\_H\_*/}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

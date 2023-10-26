@@ -1,0 +1,99 @@
+\hypertarget{spi__cfg_8c}{}\doxysection{C\+:/\+Users/figue/\+Documents/2.Electronics/1.Embedded\+\_\+\+Systems/\+STM32/\+Bare\+\_\+\+Metal/\+Boards/\+Nucleo\+\_\+\+F401\+RE/\+Projects/adxl345-\/driver/adxl345\+\_\+code/src/spi\+\_\+cfg.c File Reference}
+\label{spi__cfg_8c}\index{C:/Users/figue/Documents/2.Electronics/1.Embedded\_Systems/STM32/Bare\_Metal/Boards/Nucleo\_F401RE/Projects/adxl345-\/driver/adxl345\_code/src/spi\_cfg.c@{C:/Users/figue/Documents/2.Electronics/1.Embedded\_Systems/STM32/Bare\_Metal/Boards/Nucleo\_F401RE/Projects/adxl345-\/driver/adxl345\_code/src/spi\_cfg.c}}
+
+
+This module contains the implementation for the Serial Peripheral Interface (SPI).  
+
+
+{\ttfamily \#include \char`\"{}spi\+\_\+cfg.\+h\char`\"{}}\newline
+Include dependency graph for spi\+\_\+cfg.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=243pt]{spi__cfg_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{struct_spi_config__t}{Spi\+Config\+\_\+t}} $\ast$const \mbox{\hyperlink{spi__cfg_8c_a72af5b1b28647c0f42591ecd067fccb9}{SPI\+\_\+\+Config\+Get}} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{struct_spi_config__t}{Spi\+Config\+\_\+t}} \mbox{\hyperlink{spi__cfg_8c_a19dbdd2a49e995603d1f6506823d2f84}{Spi\+Config}} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This module contains the implementation for the Serial Peripheral Interface (SPI). 
+
+\begin{DoxyAuthor}{Author}
+Jose Luis Figueroa. 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2023-\/07-\/14
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2023 Jose Luis Figueroa. MIT License. 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{spi__cfg_8c_a72af5b1b28647c0f42591ecd067fccb9}\label{spi__cfg_8c_a72af5b1b28647c0f42591ecd067fccb9}} 
+\index{spi\_cfg.c@{spi\_cfg.c}!SPI\_ConfigGet@{SPI\_ConfigGet}}
+\index{SPI\_ConfigGet@{SPI\_ConfigGet}!spi\_cfg.c@{spi\_cfg.c}}
+\doxysubsubsection{\texorpdfstring{SPI\_ConfigGet()}{SPI\_ConfigGet()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_spi_config__t}{Spi\+Config\+\_\+t}} $\ast$const SPI\+\_\+\+Config\+Get (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+{\bfseries{Description\+:}} This function is used to initialize the SPI based on the configuration table defined in spi\+\_\+cfg module.
+
+PRE-\/\+CONDITION\+: configuration table needs to be populated (sizeof \texorpdfstring{$>$}{>} 0) POST-\/\+CONDITION\+: A constant pointer to the first member of the ~\newline
+ configuration table will be returned. \begin{DoxyReturn}{Returns}
+A pointer to the configuration table.
+\end{DoxyReturn}
+{\bfseries{Example\+:}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_spi_config__t}{SpiConfig\_t}}\ *\ \textcolor{keyword}{const}\ \mbox{\hyperlink{spi__cfg_8c_a19dbdd2a49e995603d1f6506823d2f84}{SpiConfig}}\ =\ \mbox{\hyperlink{spi__cfg_8c_a72af5b1b28647c0f42591ecd067fccb9}{SPI\_ConfigGet}}();}
+\DoxyCodeLine{}
+\DoxyCodeLine{SPI\_Init(\mbox{\hyperlink{spi__cfg_8c_a19dbdd2a49e995603d1f6506823d2f84}{SpiConfig}});}
+
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{spi__cfg_8c_a72af5b1b28647c0f42591ecd067fccb9}{SPI\+\_\+\+Config\+Get}} 
+
+SPI\+\_\+\+Init 
+
+SPI\+\_\+\+Transfer 
+
+SPI\+\_\+\+Register\+Write 
+
+SPI\+\_\+\+Register\+Read 
+
+SPI\+\_\+\+Callback\+Register 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{spi__cfg_8c_a19dbdd2a49e995603d1f6506823d2f84}\label{spi__cfg_8c_a19dbdd2a49e995603d1f6506823d2f84}} 
+\index{spi\_cfg.c@{spi\_cfg.c}!SpiConfig@{SpiConfig}}
+\index{SpiConfig@{SpiConfig}!spi\_cfg.c@{spi\_cfg.c}}
+\doxysubsubsection{\texorpdfstring{SpiConfig}{SpiConfig}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_spi_config__t}{Spi\+Config\+\_\+t}} Spi\+Config\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ }
+\DoxyCodeLine{\{}
+\DoxyCodeLine{}
+\DoxyCodeLine{\ \ \ \{\mbox{\hyperlink{spi__cfg_8h_a8ed88c83798d221d2afb7ab8b4023faaae01f25f2493c2b0a1406ee1371a2752d}{SPI\_CHANNEL1}},\ \mbox{\hyperlink{spi__cfg_8h_af7fd666f01e1a2fe00c42b85eaa3bf4dad9636eac0759655110aa77dd6c22da6c}{SPI\_MODE3}},\ \mbox{\hyperlink{spi__cfg_8h_a402dd0baa9458df07d91ef47836ffe47a84379dc90398ca075038c8d5ee465f6a}{SPI\_MASTER}},\ \mbox{\hyperlink{spi__cfg_8h_a3cb3dda1124db8846befff5be1bdfb2fa8231bf0ac5d9725518ece77bfd9bec1e}{SPI\_FPCLK4}},\ \mbox{\hyperlink{spi__cfg_8h_a474aab4df5cccbad97f07bffe96dfb34a21040ae68209a0a22c86e627d17b7778}{HARDWARE\_NSS\_ENABLED}},\ }
+\DoxyCodeLine{\ \ \ \mbox{\hyperlink{spi__cfg_8h_ad0d0fad64f9813e5853f46b5bc1a3af9a1eae4fe3047bf4fbef593e1d39562f45}{SPI\_MSB}},\ \mbox{\hyperlink{spi__cfg_8h_ad62f9d63a1ab4982d18a733bec771326ab90ebf6910c1da04cfe4fe611b46866f}{SPI\_FULL\_DUPLEX}},\ \mbox{\hyperlink{spi__cfg_8h_abcc4f72e578adda03140d4dd9e459ebaa7d0f3f931e11690790cd430da3023142}{SPI\_8BITS}}\},}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+The following array contains the configuration data for each Serial Peripheral Interface. Each row represent a single SPI configuration. Each column is representing a member of the \mbox{\hyperlink{struct_spi_config__t}{Spi\+Config\+\_\+t}} structure. This table is read in by SPI\+\_\+\+Init, where each channel is then set up based on this table. The SPI\+\_\+\+CHANNELS\+\_\+\+NUMBER constant should be agreed with the number of row. 

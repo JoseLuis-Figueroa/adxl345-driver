@@ -1,0 +1,194 @@
+\hypertarget{adxl345_8h}{}\doxysection{C\+:/\+Users/figue/\+Documents/2.Electronics/1.Embedded\+\_\+\+Systems/\+STM32/\+Bare\+\_\+\+Metal/\+Boards/\+Nucleo\+\_\+\+F401\+RE/\+Projects/adxl345-\/driver/adxl345\+\_\+code/include/adxl345.h File Reference}
+\label{adxl345_8h}\index{C:/Users/figue/Documents/2.Electronics/1.Embedded\_Systems/STM32/Bare\_Metal/Boards/Nucleo\_F401RE/Projects/adxl345-\/driver/adxl345\_code/include/adxl345.h@{C:/Users/figue/Documents/2.Electronics/1.Embedded\_Systems/STM32/Bare\_Metal/Boards/Nucleo\_F401RE/Projects/adxl345-\/driver/adxl345\_code/include/adxl345.h}}
+
+
+The interface definition for the adxl345. This is the header file for the definition of the interface for adxl345 digital accelerometer.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}spi.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}dio.\+h\char`\"{}}\newline
+Include dependency graph for adxl345.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{adxl345_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{adxl345_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{adxl345_8h_a7a660e4283676c9fad0e9bee263b6da6}\label{adxl345_8h_a7a660e4283676c9fad0e9bee263b6da6}} 
+\#define {\bfseries DEVID\+\_\+R}~(0x00)
+\item 
+\mbox{\Hypertarget{adxl345_8h_a5516e48f7cfee1a372f39c19edbc896b}\label{adxl345_8h_a5516e48f7cfee1a372f39c19edbc896b}} 
+\#define {\bfseries POWER\+\_\+\+CTL\+\_\+R}~(0x2D)
+\item 
+\mbox{\Hypertarget{adxl345_8h_a845ae9a73e4515b75798857e006ec237}\label{adxl345_8h_a845ae9a73e4515b75798857e006ec237}} 
+\#define {\bfseries DATA\+\_\+\+FORMAT\+\_\+R}~(0x31)
+\item 
+\mbox{\Hypertarget{adxl345_8h_a2380880381cd17203ca458473e7716ab}\label{adxl345_8h_a2380880381cd17203ca458473e7716ab}} 
+\#define {\bfseries DATA\+\_\+\+START\+\_\+R}~(0x32)
+\item 
+\mbox{\Hypertarget{adxl345_8h_ab702106cf3b3e96750b6845ded4e0299}\label{adxl345_8h_ab702106cf3b3e96750b6845ded4e0299}} 
+\#define {\bfseries RESET}~(0x00)
+\item 
+\mbox{\Hypertarget{adxl345_8h_a98479b05cab0fbbe5ad5c3d9d5cc9f2f}\label{adxl345_8h_a98479b05cab0fbbe5ad5c3d9d5cc9f2f}} 
+\#define {\bfseries FOUR\+\_\+G}~(0x01)
+\item 
+\mbox{\Hypertarget{adxl345_8h_a605910015367530739381e0e91dc19c0}\label{adxl345_8h_a605910015367530739381e0e91dc19c0}} 
+\#define {\bfseries SET\+\_\+\+MEASURE}~(0x08)
+\item 
+\mbox{\Hypertarget{adxl345_8h_a48be490a424d2d72729b14b421a08b35}\label{adxl345_8h_a48be490a424d2d72729b14b421a08b35}} 
+\#define {\bfseries MULTI\+\_\+\+BYTE\+\_\+\+EN}~(0x40)
+\item 
+\mbox{\Hypertarget{adxl345_8h_aff0f2d52596a7a0b104ef88aa1eccd2b}\label{adxl345_8h_aff0f2d52596a7a0b104ef88aa1eccd2b}} 
+\#define {\bfseries DEVICE\+\_\+\+ADDR}~(0x53)
+\item 
+\mbox{\Hypertarget{adxl345_8h_a67442a094ae12d83374ade5ad51f8322}\label{adxl345_8h_a67442a094ae12d83374ade5ad51f8322}} 
+\#define {\bfseries READ\+\_\+\+OPERATION}~(0x80)
+\item 
+\mbox{\Hypertarget{adxl345_8h_a7ceaf61826c78eb043fc5ffb5a12db88}\label{adxl345_8h_a7ceaf61826c78eb043fc5ffb5a12db88}} 
+\#define {\bfseries FOUR\+\_\+\+G\+\_\+\+SCALE\+\_\+\+FACTOR}~(0.\+0078)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{adxl345_8h_ae12ae7006b3dad9c6d3a36b270a59161}{ADXL345\+\_\+init}} (\mbox{\hyperlink{spi__cfg_8h_a8ed88c83798d221d2afb7ab8b4023faa}{Spi\+Channel\+\_\+t}} Channel, \mbox{\hyperlink{dio__cfg_8h_abe5dc700bc4d664a1c594968ea8ae9b2}{Dio\+Port\+\_\+t}} Port, \mbox{\hyperlink{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9ef}{Dio\+Pin\+\_\+t}} Pin)
+\item 
+void \mbox{\hyperlink{adxl345_8h_acc5207490bc5c75ee0533119e20c4628}{ADXL345\+\_\+read}} (\mbox{\hyperlink{spi__cfg_8h_a8ed88c83798d221d2afb7ab8b4023faa}{Spi\+Channel\+\_\+t}} Channel, \mbox{\hyperlink{dio__cfg_8h_abe5dc700bc4d664a1c594968ea8ae9b2}{Dio\+Port\+\_\+t}} Port, \mbox{\hyperlink{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9ef}{Dio\+Pin\+\_\+t}} Pin, uint16\+\_\+t address, uint16\+\_\+t $\ast$data)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The interface definition for the adxl345. This is the header file for the definition of the interface for adxl345 digital accelerometer. 
+
+\begin{DoxyAuthor}{Author}
+Jose Luis Figueroa 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2023-\/10-\/5
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2023 Jose Luis Figueroa. MIT License 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{adxl345_8h_ae12ae7006b3dad9c6d3a36b270a59161}\label{adxl345_8h_ae12ae7006b3dad9c6d3a36b270a59161}} 
+\index{adxl345.h@{adxl345.h}!ADXL345\_init@{ADXL345\_init}}
+\index{ADXL345\_init@{ADXL345\_init}!adxl345.h@{adxl345.h}}
+\doxysubsubsection{\texorpdfstring{ADXL345\_init()}{ADXL345\_init()}}
+{\footnotesize\ttfamily void ADXL345\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{spi__cfg_8h_a8ed88c83798d221d2afb7ab8b4023faa}{Spi\+Channel\+\_\+t}}}]{Channel,  }\item[{\mbox{\hyperlink{dio__cfg_8h_abe5dc700bc4d664a1c594968ea8ae9b2}{Dio\+Port\+\_\+t}}}]{Port,  }\item[{\mbox{\hyperlink{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9ef}{Dio\+Pin\+\_\+t}}}]{Pin }\end{DoxyParamCaption})}
+
+{\bfseries{Description\+:}} This function is used to initialize the ADXL345 digital accelerometer.
+
+PRE-\/\+CONDITION\+: The MCU clocks must be configured and enabled. PRE-\/\+CONDITION\+: SPI pins should be configured using GPIO driver. PRE-\/\+CONDITION\+: SPI peripheral should be configured.
+
+POST-\/\+CONDITION\+: The ADXL345 is set up with the configuration settings.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Channel} & is the SPI from Spi\+Channel\+\_\+t used to transfer data. \\
+\hline
+\mbox{\texttt{ in}}  & {\em Port} & is the GPIO from Dio\+Port\+\_\+t to be modified. \\
+\hline
+\mbox{\texttt{ in}}  & {\em Pin} & is the pin from Dio\+Pin\+\_\+t to be modified used to configure Slave-\/\+Selector.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+{\bfseries{Example\+:}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_dio_config__t}{DioConfig\_t}}\ *\ \textcolor{keyword}{const}\ \mbox{\hyperlink{dio__cfg_8c_ad606ed583fbec9d0749c319c717a65f1}{DioConfig}}\ =\ \mbox{\hyperlink{dio__cfg_8c_ad94e4a3383df84c2eb51f941e343755b}{DIO\_configGet}}();}
+\DoxyCodeLine{\mbox{\hyperlink{dio_8c_aebe782dff96e21ec5192e3056ca8d88b}{DIO\_init}}(\mbox{\hyperlink{dio__cfg_8c_ad606ed583fbec9d0749c319c717a65f1}{DioConfig}});}
+\DoxyCodeLine{\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_spi_config__t}{SpiConfig\_t}}\ *\ \textcolor{keyword}{const}\ \mbox{\hyperlink{spi__cfg_8c_a19dbdd2a49e995603d1f6506823d2f84}{SpiConfig}}\ =\ SPI\_configGet();}
+\DoxyCodeLine{SPI\_Init(\mbox{\hyperlink{spi__cfg_8c_a19dbdd2a49e995603d1f6506823d2f84}{SpiConfig}});}
+\DoxyCodeLine{ADXL345(Channel,\ Port,\ Pin);}
+
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{dio__cfg_8c_ad94e4a3383df84c2eb51f941e343755b}{DIO\+\_\+config\+Get}} 
+
+\mbox{\hyperlink{dio_8c_aebe782dff96e21ec5192e3056ca8d88b}{DIO\+\_\+init}} 
+
+SPI\+\_\+config\+Get 
+
+\mbox{\hyperlink{spi_8c_ac48916da3e83793b4ab8e77ff1b20f12}{SPI\+\_\+init}} 
+
+\mbox{\hyperlink{adxl345_8c_ae12ae7006b3dad9c6d3a36b270a59161}{ADXL345\+\_\+init}} 
+
+\mbox{\hyperlink{adxl345_8c_acc5207490bc5c75ee0533119e20c4628}{ADXL345\+\_\+read}} 
+
+ADXL345\+\_\+write 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{adxl345_8h_acc5207490bc5c75ee0533119e20c4628}\label{adxl345_8h_acc5207490bc5c75ee0533119e20c4628}} 
+\index{adxl345.h@{adxl345.h}!ADXL345\_read@{ADXL345\_read}}
+\index{ADXL345\_read@{ADXL345\_read}!adxl345.h@{adxl345.h}}
+\doxysubsubsection{\texorpdfstring{ADXL345\_read()}{ADXL345\_read()}}
+{\footnotesize\ttfamily void ADXL345\+\_\+read (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{spi__cfg_8h_a8ed88c83798d221d2afb7ab8b4023faa}{Spi\+Channel\+\_\+t}}}]{Channel,  }\item[{\mbox{\hyperlink{dio__cfg_8h_abe5dc700bc4d664a1c594968ea8ae9b2}{Dio\+Port\+\_\+t}}}]{Port,  }\item[{\mbox{\hyperlink{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9ef}{Dio\+Pin\+\_\+t}}}]{Pin,  }\item[{uint16\+\_\+t}]{address,  }\item[{uint16\+\_\+t $\ast$}]{data }\end{DoxyParamCaption})}
+
+{\bfseries{Description\+:}} This function is used to directly read data from ADXL345 register.
+
+PRE-\/\+CONDITION\+: SPI\+\_\+init must be called with valid configuration data. PRE-\/\+CONDITION\+: Address is within the boundaries of the ADXL345 register address space.
+
+POST-\/\+CONDITION\+: The register located at address is read it.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Channel} & is the SPI from Spi\+Channel\+\_\+t used to receive data. \\
+\hline
+\mbox{\texttt{ in}}  & {\em Port} & is the GPIO from Dio\+Port\+\_\+t to be modified. \\
+\hline
+\mbox{\texttt{ in}}  & {\em Pin} & is the pin from Dio\+Pin\+\_\+t to be modified used to configure Slave-\/\+Selector. \\
+\hline
+\mbox{\texttt{ in}}  & {\em address} & is a register address within the ADXL345 register map. \\
+\hline
+\mbox{\texttt{ in}}  & {\em value} & is the data to set the ADXL345 register.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void
+\end{DoxyReturn}
+{\bfseries{Example\+:}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{adxl345_8c_acc5207490bc5c75ee0533119e20c4628}{ADXL345\_read}}(Channel,\ Port,\ Pin,\ DATA\_FORMAT\_R,\ FOUR\_G);}
+
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{dio__cfg_8c_ad94e4a3383df84c2eb51f941e343755b}{DIO\+\_\+config\+Get}} 
+
+\mbox{\hyperlink{dio_8c_aebe782dff96e21ec5192e3056ca8d88b}{DIO\+\_\+init}} 
+
+SPI\+\_\+config\+Get 
+
+\mbox{\hyperlink{spi_8c_ac48916da3e83793b4ab8e77ff1b20f12}{SPI\+\_\+init}} 
+
+\mbox{\hyperlink{adxl345_8c_ae12ae7006b3dad9c6d3a36b270a59161}{ADXL345\+\_\+init}} 
+
+\mbox{\hyperlink{adxl345_8c_acc5207490bc5c75ee0533119e20c4628}{ADXL345\+\_\+read}} 
+
+ADXL345\+\_\+write 
+\end{DoxySeeAlso}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{adxl345_8h_acc5207490bc5c75ee0533119e20c4628_cgraph}
+\end{center}
+\end{figure}

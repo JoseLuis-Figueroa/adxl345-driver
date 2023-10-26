@@ -1,0 +1,60 @@
+\hypertarget{index_intro}{}\doxysection{Introduction}\label{index_intro}
+This project is a personal endeavor focused on developing reusable firmware for microcontroller platforms. The goal is to create a modular and efficient SPI reusable driver that can be easily adapted to various microcontrollers. The project communicates two boars (Master-\/\+Slave) between them. The DIO driver is used to configure the selected SPI port.\hypertarget{index_version}{}\doxysection{Version Log}\label{index_version}
+
+\begin{DoxyItemize}
+\item \mbox{[}Version 1.\+0\mbox{]} -\/ Initial release
+\end{DoxyItemize}\hypertarget{index_architecture}{}\doxysection{Software Architecture Overview}\label{index_architecture}
+The software architecture follows a layered approach. This design pattern separates low-\/level code (drivers or HALs), and application-\/specific code. A layered architecture promotes reusability and simplifies the portability between different applications or microcontrollers. The layered architecture can be seen in figure 1 and contains a driver and application layer operating on the hardware.
+
+\begin{center} \tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{1}{|X[-1]}|}
+\hline
+Application Code  \\\cline{1-1}
+Drivers  \\\cline{1-1}
+Hardware  \\\cline{1-1}
+\end{longtabu}
+Figure 1. Two-\/\+Layer Software Architecture. \end{center} 
+
+The driver layer includes all the code (drivers) necessary to get the microcontroller and any other associated board hardware, such as sensors (accelerometer), buttons, and so forth, running. The application code (main) contains no driver code but has access to the low-\/level hardware through a driver-\/layer interface that hides the hardware details from the application developer but still allows them to perform a useful function.\hypertarget{index_coding-standards}{}\doxysection{Coding Standards}\label{index_coding-standards}
+This project is developed as bare-\/metal firmware and adheres to industry-\/standard coding practices, following the MISRA-\/C guidelines. This includes consistent naming conventions, code formatting, and best practices for code organization and documentation.\hypertarget{index_description}{}\doxysection{Project Description}\label{index_description}
+In this setup, the SPI1 is configured as a master. The setting includes a baud rate = 4KHz, full duplex communication, an 8-\/bit data frame format, and most significant bit transmission. The SPI driver is used to configure the ADXL345 accelerometer. A KY-\/57 logic analyzer is connected between the MCU and the ADXL345 accelerometer for data reception and analysis. To establish the physical connections, the GPIO driver configures the SPI1 pins. The following table illustrates the pin connections among the Nucleo board, and KY-\/57 logic analyzer\+:
+
+\begin{center}\end{center} 
+
+\begin{center}\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{4}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ SPI Connection   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Nucleo F401\+RE   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ ADXL345   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Logic Analyzer    }\\\cline{1-4}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ SPI Connection   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Nucleo F401\+RE   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ ADXL345   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Logic Analyzer    }\\\cline{1-4}
+\endhead
+NSS   &PA4   &CS   &CH4    \\\cline{1-4}
+SCK   &PA5   &SCL   &CH1    \\\cline{1-4}
+MISO   &PA6   &SDO   &CH2    \\\cline{1-4}
+MOSI   &PA7   &SDA   &CH3   \\\cline{1-4}
+\end{longtabu}
+Table 1. SPI Pin Connections. \end{center} 
+
+The ADXL345\+\_\+init function configures the ADXL345 accelerometer with 10 bits full resolution at +/-\/4g and sets the device into measurement mode. The application code retrieves data from the accelerometer\textquotesingle{}s x, and y axes, subsequently processing this data to obtain the g-\/scale factor.\hypertarget{index_requirements}{}\doxysection{Project Requirements}\label{index_requirements}
+The project aims to meet the following requirements\+:
+\begin{DoxyItemize}
+\item Provide a set of reusable functions for ADXL345 accelerometer.
+\item Maintain portability across different microcontroller platforms.
+\item Follow industry-\/standard coding practices and guidelines.
+\end{DoxyItemize}\hypertarget{index_tools}{}\doxysection{Tools}\label{index_tools}
+The current tooling used for this project includes\+:
+\begin{DoxyItemize}
+\item Development Board\+: Nucleo-\/\+F401\+RE
+\item IDE/\+Debugger\+: Visual Studio Code (Platform\+IO extension)
+\item Compiler Toolchain\+: GNU ARM Embedded Toolchain
+\end{DoxyItemize}\hypertarget{index_usage}{}\doxysection{Usage}\label{index_usage}
+The project is well-\/documented using Doxygen. Inline comments are used extensively to provide detailed explanations of code functionality, usage, and limitations. The Doxygen-\/generated documentation provides an easy-\/to-\/navigate reference for all project components.\hypertarget{index_acronyms}{}\doxysection{Acronyms}\label{index_acronyms}
+
+\begin{DoxyItemize}
+\item MCU\+: Microcontroller Unit
+\item SPI\+: Serial Peripheral Interface
+\item DIO\+: Digital Input/\+Output 
+\end{DoxyItemize}

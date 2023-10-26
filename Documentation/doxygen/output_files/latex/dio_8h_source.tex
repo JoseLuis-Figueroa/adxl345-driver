@@ -1,0 +1,57 @@
+\hypertarget{dio_8h_source}{}\doxysection{dio.\+h}
+\label{dio_8h_source}\index{C:/Users/figue/Documents/2.Electronics/1.Embedded\_Systems/STM32/Bare\_Metal/Boards/Nucleo\_F401RE/Projects/adxl345-\/driver/adxl345\_code/include/dio.h@{C:/Users/figue/Documents/2.Electronics/1.Embedded\_Systems/STM32/Bare\_Metal/Boards/Nucleo\_F401RE/Projects/adxl345-\/driver/adxl345\_code/include/dio.h}}
+\mbox{\hyperlink{dio_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#ifndef\ DIO\_H\_}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#define\ DIO\_H\_}}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{comment}{/*****************************************************************************}}
+\DoxyCodeLine{00024\ \textcolor{comment}{*\ Includes}}
+\DoxyCodeLine{00025\ \textcolor{comment}{*****************************************************************************/}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{dio__cfg_8h}{dio\_cfg.h}}"{}}\ \ \ \ \textcolor{comment}{/*For\ dio\ configuration*/}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ "{}stm32f4xx.h"{}}\ \ \textcolor{comment}{/*Microcontroller\ family\ header*/}\ \ }
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{comment}{/*****************************************************************************}}
+\DoxyCodeLine{00032\ \textcolor{comment}{*\ Preprocessor\ Constants}}
+\DoxyCodeLine{00033\ \textcolor{comment}{*****************************************************************************/}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{comment}{/*****************************************************************************}}
+\DoxyCodeLine{00036\ \textcolor{comment}{*\ Configuration\ Constants}}
+\DoxyCodeLine{00037\ \textcolor{comment}{*****************************************************************************/}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{comment}{/*****************************************************************************}}
+\DoxyCodeLine{00040\ \textcolor{comment}{*\ Macros}}
+\DoxyCodeLine{00041\ \textcolor{comment}{*****************************************************************************/}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{comment}{/*****************************************************************************}}
+\DoxyCodeLine{00044\ \textcolor{comment}{*\ Typedefs}}
+\DoxyCodeLine{00045\ \textcolor{comment}{*****************************************************************************/}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{comment}{/*****************************************************************************}}
+\DoxyCodeLine{00048\ \textcolor{comment}{*\ Variables}}
+\DoxyCodeLine{00049\ \textcolor{comment}{*****************************************************************************/}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{comment}{/*****************************************************************************}}
+\DoxyCodeLine{00052\ \textcolor{comment}{*\ Function\ Prototypes}}
+\DoxyCodeLine{00053\ \textcolor{comment}{*****************************************************************************/}}
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00055\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\{}
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{dio_8h_aebe782dff96e21ec5192e3056ca8d88b}{DIO\_init}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_dio_config__t}{DioConfig\_t}}\ *\ \textcolor{keyword}{const}\ Config);}
+\DoxyCodeLine{00059\ \mbox{\hyperlink{dio__cfg_8h_acccd72f1da55a79911ba97e4cf3c176f}{DioPinState\_t}}\ \mbox{\hyperlink{dio_8h_a0d32e902fa164c3b7b901630c0bcc249}{DIO\_pinRead}}(\mbox{\hyperlink{dio__cfg_8h_abe5dc700bc4d664a1c594968ea8ae9b2}{DioPort\_t}}\ Port,\ \mbox{\hyperlink{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9ef}{DioPin\_t}}\ Pin);}
+\DoxyCodeLine{00060\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{dio_8h_a3abc9becdaa8630d94206050c82580bf}{DIO\_pinWrite}}(\mbox{\hyperlink{dio__cfg_8h_abe5dc700bc4d664a1c594968ea8ae9b2}{DioPort\_t}}\ Port,\ \mbox{\hyperlink{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9ef}{DioPin\_t}}\ Pin,\ \mbox{\hyperlink{dio__cfg_8h_acccd72f1da55a79911ba97e4cf3c176f}{DioPinState\_t}}\ State);}
+\DoxyCodeLine{00061\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{dio_8h_a6a3f5b6494b09bfc6b15bc6c401a6341}{DIO\_pinToggle}}(\mbox{\hyperlink{dio__cfg_8h_abe5dc700bc4d664a1c594968ea8ae9b2}{DioPort\_t}}\ Port,\ \mbox{\hyperlink{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9ef}{DioPin\_t}}\ Pin);}
+\DoxyCodeLine{00062\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{dio_8h_af155115944633a5e1df9dade3787e799}{DIO\_registerWrite}}(uint32\_t\ address,\ uint32\_t\ value);}
+\DoxyCodeLine{00063\ uint32\_t\ \mbox{\hyperlink{dio_8h_acb402f0cb510766d39ddb676bdb782bb}{DIO\_registerRead}}(uint32\_t\ address);}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00066\ \}\ \textcolor{comment}{//\ extern\ C}}
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*DIO\_H\_*/}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

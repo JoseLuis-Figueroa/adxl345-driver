@@ -1,0 +1,101 @@
+\hypertarget{dio__cfg_8c}{}\doxysection{C\+:/\+Users/figue/\+Documents/2.Electronics/1.Embedded\+\_\+\+Systems/\+STM32/\+Bare\+\_\+\+Metal/\+Boards/\+Nucleo\+\_\+\+F401\+RE/\+Projects/adxl345-\/driver/adxl345\+\_\+code/src/dio\+\_\+cfg.c File Reference}
+\label{dio__cfg_8c}\index{C:/Users/figue/Documents/2.Electronics/1.Embedded\_Systems/STM32/Bare\_Metal/Boards/Nucleo\_F401RE/Projects/adxl345-\/driver/adxl345\_code/src/dio\_cfg.c@{C:/Users/figue/Documents/2.Electronics/1.Embedded\_Systems/STM32/Bare\_Metal/Boards/Nucleo\_F401RE/Projects/adxl345-\/driver/adxl345\_code/src/dio\_cfg.c}}
+
+
+This module contains the implementation for the digital input/output peripheral configuration.  
+
+
+{\ttfamily \#include \char`\"{}dio\+\_\+cfg.\+h\char`\"{}}\newline
+Include dependency graph for dio\+\_\+cfg.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=243pt]{dio__cfg_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{struct_dio_config__t}{Dio\+Config\+\_\+t}} $\ast$const \mbox{\hyperlink{dio__cfg_8c_ad94e4a3383df84c2eb51f941e343755b}{DIO\+\_\+config\+Get}} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{struct_dio_config__t}{Dio\+Config\+\_\+t}} \mbox{\hyperlink{dio__cfg_8c_ad606ed583fbec9d0749c319c717a65f1}{Dio\+Config}} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This module contains the implementation for the digital input/output peripheral configuration. 
+
+\begin{DoxyAuthor}{Author}
+Jose Luis Figueroa 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2023-\/03-\/17
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2023 Jose Luis Figueroa. MIT License. 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{dio__cfg_8c_ad94e4a3383df84c2eb51f941e343755b}\label{dio__cfg_8c_ad94e4a3383df84c2eb51f941e343755b}} 
+\index{dio\_cfg.c@{dio\_cfg.c}!DIO\_configGet@{DIO\_configGet}}
+\index{DIO\_configGet@{DIO\_configGet}!dio\_cfg.c@{dio\_cfg.c}}
+\doxysubsubsection{\texorpdfstring{DIO\_configGet()}{DIO\_configGet()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_dio_config__t}{Dio\+Config\+\_\+t}} $\ast$const DIO\+\_\+config\+Get (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+{\bfseries{Description\+:}} This function is used to initialize the DIO based on the configuration table defined in dio\+\_\+cfg module.
+
+PRE-\/\+CONDITION\+: configuration table needs to be populated (sizeof \texorpdfstring{$>$}{>} 0) POST-\/\+CONDITION\+: A constant pointer to the first member of the ~\newline
+ configuration table will be returned. \begin{DoxyReturn}{Returns}
+A pointer to the configuration table.
+\end{DoxyReturn}
+{\bfseries{Example\+:}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{const}\ Dio\_ConfigType\_t\ *\ \textcolor{keyword}{const}\ \mbox{\hyperlink{dio__cfg_8c_ad606ed583fbec9d0749c319c717a65f1}{DioConfig}}\ =\ \mbox{\hyperlink{dio__cfg_8c_ad94e4a3383df84c2eb51f941e343755b}{DIO\_configGet}}();}
+\DoxyCodeLine{}
+\DoxyCodeLine{DIO\_Init(\mbox{\hyperlink{dio__cfg_8c_ad606ed583fbec9d0749c319c717a65f1}{DioConfig}});}
+
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{dio_8c_aebe782dff96e21ec5192e3056ca8d88b}{DIO\+\_\+init}} 
+
+DIO\+\_\+channel\+Read 
+
+DIO\+\_\+channel\+Write 
+
+DIO\+\_\+channel\+Toggle 
+
+\mbox{\hyperlink{dio_8c_af155115944633a5e1df9dade3787e799}{DIO\+\_\+register\+Write}} 
+
+\mbox{\hyperlink{dio_8c_acb402f0cb510766d39ddb676bdb782bb}{DIO\+\_\+register\+Read}} 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{dio__cfg_8c_ad606ed583fbec9d0749c319c717a65f1}\label{dio__cfg_8c_ad606ed583fbec9d0749c319c717a65f1}} 
+\index{dio\_cfg.c@{dio\_cfg.c}!DioConfig@{DioConfig}}
+\index{DioConfig@{DioConfig}!dio\_cfg.c@{dio\_cfg.c}}
+\doxysubsubsection{\texorpdfstring{DioConfig}{DioConfig}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_dio_config__t}{Dio\+Config\+\_\+t}} Dio\+Config\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ }
+\DoxyCodeLine{\{}
+\DoxyCodeLine{\ }
+\DoxyCodeLine{\ \ \ \{\mbox{\hyperlink{dio__cfg_8h_abe5dc700bc4d664a1c594968ea8ae9b2af9be5fca1bf8343526a7854be6d1a5af}{DIO\_PA}},\ \mbox{\hyperlink{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa272105777833b00a8c62e95f3c46951d}{DIO\_PA4}},\ \mbox{\hyperlink{dio__cfg_8h_acfdc903a5070db089697cf32d1e7406ba066013d99bf79a58f5bd736558b90e2c}{DIO\_OUTPUT}},\ \ \ \mbox{\hyperlink{dio__cfg_8h_a50c66bd6f27b32ade420e80612abd20aaa09815466a75fc2652f110f646679171}{DIO\_PUSH\_PULL}},\ \mbox{\hyperlink{dio__cfg_8h_ac240182fe51c789b350cd2210010c011ad52370bfa9deadd8456f4a5d051768cd}{DIO\_LOW\_SPEED}},\ \mbox{\hyperlink{dio__cfg_8h_a1abf871edd499ec4678030429f1f7036aef784b82b61e6cc3008e53e06cf957d6}{DIO\_NO\_RESISTOR}},\ \mbox{\hyperlink{dio__cfg_8h_a9bba5b3e13a5bd739085ab0b0b03876dadcb16a6a4870c89e17b8557a8365238e}{DIO\_AF5}}\},}
+\DoxyCodeLine{\ \ \ \{\mbox{\hyperlink{dio__cfg_8h_abe5dc700bc4d664a1c594968ea8ae9b2af9be5fca1bf8343526a7854be6d1a5af}{DIO\_PA}},\ \mbox{\hyperlink{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efabb0375c0a73b8254ab3ccf2ee2cabdc6}{DIO\_PA5}},\ \mbox{\hyperlink{dio__cfg_8h_acfdc903a5070db089697cf32d1e7406ba5e48fc7915bca8f32e68418824c7e3b7}{DIO\_FUNCTION}},\ \mbox{\hyperlink{dio__cfg_8h_a50c66bd6f27b32ade420e80612abd20aaa09815466a75fc2652f110f646679171}{DIO\_PUSH\_PULL}},\ \mbox{\hyperlink{dio__cfg_8h_ac240182fe51c789b350cd2210010c011ad52370bfa9deadd8456f4a5d051768cd}{DIO\_LOW\_SPEED}},\ \mbox{\hyperlink{dio__cfg_8h_a1abf871edd499ec4678030429f1f7036aef784b82b61e6cc3008e53e06cf957d6}{DIO\_NO\_RESISTOR}},\ \mbox{\hyperlink{dio__cfg_8h_a9bba5b3e13a5bd739085ab0b0b03876dadcb16a6a4870c89e17b8557a8365238e}{DIO\_AF5}}\},}
+\DoxyCodeLine{\ \ \ \{\mbox{\hyperlink{dio__cfg_8h_abe5dc700bc4d664a1c594968ea8ae9b2af9be5fca1bf8343526a7854be6d1a5af}{DIO\_PA}},\ \mbox{\hyperlink{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa571175d91104776aad0b7b4106f8d805}{DIO\_PA6}},\ \mbox{\hyperlink{dio__cfg_8h_acfdc903a5070db089697cf32d1e7406ba5e48fc7915bca8f32e68418824c7e3b7}{DIO\_FUNCTION}},\ \mbox{\hyperlink{dio__cfg_8h_a50c66bd6f27b32ade420e80612abd20aaa09815466a75fc2652f110f646679171}{DIO\_PUSH\_PULL}},\ \mbox{\hyperlink{dio__cfg_8h_ac240182fe51c789b350cd2210010c011ad52370bfa9deadd8456f4a5d051768cd}{DIO\_LOW\_SPEED}},\ \mbox{\hyperlink{dio__cfg_8h_a1abf871edd499ec4678030429f1f7036aef784b82b61e6cc3008e53e06cf957d6}{DIO\_NO\_RESISTOR}},\ \mbox{\hyperlink{dio__cfg_8h_a9bba5b3e13a5bd739085ab0b0b03876dadcb16a6a4870c89e17b8557a8365238e}{DIO\_AF5}}\},}
+\DoxyCodeLine{\ \ \ \{\mbox{\hyperlink{dio__cfg_8h_abe5dc700bc4d664a1c594968ea8ae9b2af9be5fca1bf8343526a7854be6d1a5af}{DIO\_PA}},\ \mbox{\hyperlink{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efab64595f661d9ee8459027eb479a0075d}{DIO\_PA7}},\ \mbox{\hyperlink{dio__cfg_8h_acfdc903a5070db089697cf32d1e7406ba5e48fc7915bca8f32e68418824c7e3b7}{DIO\_FUNCTION}},\ \mbox{\hyperlink{dio__cfg_8h_a50c66bd6f27b32ade420e80612abd20aaa09815466a75fc2652f110f646679171}{DIO\_PUSH\_PULL}},\ \mbox{\hyperlink{dio__cfg_8h_ac240182fe51c789b350cd2210010c011ad52370bfa9deadd8456f4a5d051768cd}{DIO\_LOW\_SPEED}},\ \mbox{\hyperlink{dio__cfg_8h_a1abf871edd499ec4678030429f1f7036aef784b82b61e6cc3008e53e06cf957d6}{DIO\_NO\_RESISTOR}},\ \mbox{\hyperlink{dio__cfg_8h_a9bba5b3e13a5bd739085ab0b0b03876dadcb16a6a4870c89e17b8557a8365238e}{DIO\_AF5}}\},}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+The following array contains the configuration data for each digital input/output peripheral channel (pin). Each row represent a single pin. Each column is representing a member of the \mbox{\hyperlink{struct_dio_config__t}{Dio\+Config\+\_\+t}} structure. This table is read in by Dio\+\_\+\+Init, where each channel is then set up based on this table. 

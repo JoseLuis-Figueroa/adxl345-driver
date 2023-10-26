@@ -1,0 +1,50 @@
+\hypertarget{adxl345_8h_source}{}\doxysection{adxl345.\+h}
+\label{adxl345_8h_source}\index{C:/Users/figue/Documents/2.Electronics/1.Embedded\_Systems/STM32/Bare\_Metal/Boards/Nucleo\_F401RE/Projects/adxl345-\/driver/adxl345\_code/include/adxl345.h@{C:/Users/figue/Documents/2.Electronics/1.Embedded\_Systems/STM32/Bare\_Metal/Boards/Nucleo\_F401RE/Projects/adxl345-\/driver/adxl345\_code/include/adxl345.h}}
+\mbox{\hyperlink{adxl345_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#ifndef\ ADXL345\_H\_}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ ADXL345\_H\_}}
+\DoxyCodeLine{00015\ \textcolor{comment}{/*****************************************************************************}}
+\DoxyCodeLine{00016\ \textcolor{comment}{*\ Includes}}
+\DoxyCodeLine{00017\ \textcolor{comment}{*****************************************************************************/}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{spi_8h}{spi.h}}"{}}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{dio_8h}{dio.h}}"{}}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{comment}{/*****************************************************************************}}
+\DoxyCodeLine{00023\ \textcolor{comment}{*\ Configuration\ Constants}}
+\DoxyCodeLine{00024\ \textcolor{comment}{*****************************************************************************/}}
+\DoxyCodeLine{00025\ \textcolor{comment}{/*adxl345\ registers*/}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#define\ DEVID\_R\ \ \ \ \ \ \ \ \ \ \ \ \ (0x00)}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#define\ POWER\_CTL\_R\ \ \ \ \ \ \ \ \ (0x2D)}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#define\ DATA\_FORMAT\_R\ \ \ \ \ \ \ (0x31)}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#define\ DATA\_START\_R\ \ \ \ \ \ \ \ (0x32)}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{comment}{/*Constants*/}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#define\ RESET\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (0x00)}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#define\ FOUR\_G\ \ \ \ \ \ \ \ \ \ \ \ \ \ (0x01)}}
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#define\ SET\_MEASURE\ \ \ \ \ \ \ \ \ (0x08)}}
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#define\ MULTI\_BYTE\_EN\ \ \ \ \ \ \ (0x40)}}
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#define\ DEVICE\_ADDR\ \ \ \ \ \ \ \ \ (0x53)}}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#define\ READ\_OPERATION\ \ \ \ \ \ (0x80)}}
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#define\ FOUR\_G\_SCALE\_FACTOR\ (0.0078)}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{comment}{/*****************************************************************************}}
+\DoxyCodeLine{00041\ \textcolor{comment}{*\ Function\ Prototypes}}
+\DoxyCodeLine{00042\ \textcolor{comment}{*****************************************************************************/}}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00044\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\{}
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{adxl345_8h_ae12ae7006b3dad9c6d3a36b270a59161}{ADXL345\_init}}(\mbox{\hyperlink{spi__cfg_8h_a8ed88c83798d221d2afb7ab8b4023faa}{SpiChannel\_t}}\ Channel,\ \mbox{\hyperlink{dio__cfg_8h_abe5dc700bc4d664a1c594968ea8ae9b2}{DioPort\_t}}\ Port,\ \mbox{\hyperlink{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9ef}{DioPin\_t}}\ Pin);}
+\DoxyCodeLine{00048\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{adxl345_8h_acc5207490bc5c75ee0533119e20c4628}{ADXL345\_read}}(\mbox{\hyperlink{spi__cfg_8h_a8ed88c83798d221d2afb7ab8b4023faa}{SpiChannel\_t}}\ Channel,\ \mbox{\hyperlink{dio__cfg_8h_abe5dc700bc4d664a1c594968ea8ae9b2}{DioPort\_t}}\ Port,\ \mbox{\hyperlink{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9ef}{DioPin\_t}}\ Pin,\ }
+\DoxyCodeLine{00049\ uint16\_t\ address,\ uint16\_t\ *data);}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{00052\ \}\ \ \ \textcolor{comment}{/*Extern\ C*/}}
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*ADXL345\_H\_*/}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

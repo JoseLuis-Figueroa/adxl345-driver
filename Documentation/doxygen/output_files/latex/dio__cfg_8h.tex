@@ -1,0 +1,680 @@
+\hypertarget{dio__cfg_8h}{}\doxysection{C\+:/\+Users/figue/\+Documents/2.Electronics/1.Embedded\+\_\+\+Systems/\+STM32/\+Bare\+\_\+\+Metal/\+Boards/\+Nucleo\+\_\+\+F401\+RE/\+Projects/adxl345-\/driver/adxl345\+\_\+code/include/dio\+\_\+cfg.h File Reference}
+\label{dio__cfg_8h}\index{C:/Users/figue/Documents/2.Electronics/1.Embedded\_Systems/STM32/Bare\_Metal/Boards/Nucleo\_F401RE/Projects/adxl345-\/driver/adxl345\_code/include/dio\_cfg.h@{C:/Users/figue/Documents/2.Electronics/1.Embedded\_Systems/STM32/Bare\_Metal/Boards/Nucleo\_F401RE/Projects/adxl345-\/driver/adxl345\_code/include/dio\_cfg.h}}
+
+
+This module contains interface definitions for the Dio configuration. This is the header file for the definition of the interface for retrieving the digital input/output configuration table.  
+
+
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dio__cfg_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_dio_config__t}{Dio\+Config\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{dio__cfg_8h_a00f8a86f3bc21109096ba9da4712ac13}{NUMBER\+\_\+\+OF\+\_\+\+PORTS}}~5U
+\item 
+\#define \mbox{\hyperlink{dio__cfg_8h_a036f6751c226936e67f6693808b6a455}{NUMBER\+\_\+\+DIGITAL\+\_\+\+PINS}}~4
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{dio__cfg_8h_acccd72f1da55a79911ba97e4cf3c176f}{Dio\+Pin\+State\+\_\+t}} \{ \mbox{\hyperlink{dio__cfg_8h_acccd72f1da55a79911ba97e4cf3c176fa37170fc54a8b1022c388eb53f5862306}{DIO\+\_\+\+LOW}}
+, \mbox{\hyperlink{dio__cfg_8h_acccd72f1da55a79911ba97e4cf3c176fa8037821f04472a22be2178ffc2883242}{DIO\+\_\+\+HIGH}}
+, \mbox{\hyperlink{dio__cfg_8h_acccd72f1da55a79911ba97e4cf3c176fa1af74a2c01fc4eebd4b2aa89e5faf196}{DIO\+\_\+\+PIN\+\_\+\+STATE\+\_\+\+MAX}}
+ \}
+\item 
+enum \mbox{\hyperlink{dio__cfg_8h_abe5dc700bc4d664a1c594968ea8ae9b2}{Dio\+Port\+\_\+t}} \{ \newline
+\mbox{\hyperlink{dio__cfg_8h_abe5dc700bc4d664a1c594968ea8ae9b2af9be5fca1bf8343526a7854be6d1a5af}{DIO\+\_\+\+PA}}
+, \mbox{\hyperlink{dio__cfg_8h_abe5dc700bc4d664a1c594968ea8ae9b2a02a12ed5fbaf448e62628510acb839f6}{DIO\+\_\+\+PB}}
+, \mbox{\hyperlink{dio__cfg_8h_abe5dc700bc4d664a1c594968ea8ae9b2aba081051d7cf8fc6476576f371457360}{DIO\+\_\+\+PC}}
+, \mbox{\hyperlink{dio__cfg_8h_abe5dc700bc4d664a1c594968ea8ae9b2a88aec3f74bb032ac74dd249180adb790}{DIO\+\_\+\+PD}}
+, \newline
+\mbox{\hyperlink{dio__cfg_8h_abe5dc700bc4d664a1c594968ea8ae9b2a5cefb557d716b12627b8729eeb90e22b}{DIO\+\_\+\+PH}}
+, \mbox{\hyperlink{dio__cfg_8h_abe5dc700bc4d664a1c594968ea8ae9b2adc9f13fc72aa1c0a2e0313531fdd7050}{DIO\+\_\+\+MAX\+\_\+\+PORT}}
+ \}
+\item 
+enum \mbox{\hyperlink{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9ef}{Dio\+Pin\+\_\+t}} \{ \newline
+\mbox{\hyperlink{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efaf807cd7c83c25e764706da288187854b}{DIO\+\_\+\+PA0}}
+, \mbox{\hyperlink{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efad00fe9478d40d9afd26a446032739be0}{DIO\+\_\+\+PA1}}
+, \mbox{\hyperlink{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efaa18a7444b6d919dbf637de2ad438c34e}{DIO\+\_\+\+PA2}}
+, \mbox{\hyperlink{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efaadd606b3c2efbe2991f2d7adc46c1b3f}{DIO\+\_\+\+PA3}}
+, \newline
+\mbox{\hyperlink{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa272105777833b00a8c62e95f3c46951d}{DIO\+\_\+\+PA4}}
+, \mbox{\hyperlink{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efabb0375c0a73b8254ab3ccf2ee2cabdc6}{DIO\+\_\+\+PA5}}
+, \mbox{\hyperlink{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa571175d91104776aad0b7b4106f8d805}{DIO\+\_\+\+PA6}}
+, \mbox{\hyperlink{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efab64595f661d9ee8459027eb479a0075d}{DIO\+\_\+\+PA7}}
+, \newline
+\mbox{\hyperlink{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efab837df72b2aa3e239e3ba8f0f28660ce}{DIO\+\_\+\+PA8}}
+, \mbox{\hyperlink{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efaad00b64db1e0c31b8146c74109c4fba1}{DIO\+\_\+\+PA9}}
+, \mbox{\hyperlink{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efafa579fb76d08e3697dd8bc4b43bc7800}{DIO\+\_\+\+PA10}}
+, \mbox{\hyperlink{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efae777e2079faaef6cde8bf0a616c0e8cb}{DIO\+\_\+\+PA11}}
+, \newline
+\mbox{\hyperlink{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa338778de80c98a6ba559b064434863c0}{DIO\+\_\+\+PA12}}
+, \mbox{\hyperlink{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa5b1b8799960582e1ca7f63e97b161efb}{DIO\+\_\+\+PA13}}
+, \mbox{\hyperlink{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa472788b7add7d63ae8e0eb79aff16eb4}{DIO\+\_\+\+PA14}}
+, \mbox{\hyperlink{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa721ba5dea56d215ea2011c1633d963b5}{DIO\+\_\+\+PA15}}
+, \newline
+\mbox{\hyperlink{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa3c8504d755565b5dfc47067622dc7039}{DIO\+\_\+\+PB0}} = 0
+, \mbox{\hyperlink{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efac29e03eba3ae55e343ca3e59363b35e7}{DIO\+\_\+\+PB1}}
+, \mbox{\hyperlink{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa95a9d013969310c2d6547c034f1f9159}{DIO\+\_\+\+PB2}}
+, \mbox{\hyperlink{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa9f931f65a4455996bfb6fdc7d37117ab}{DIO\+\_\+\+PB3}}
+, \newline
+\mbox{\hyperlink{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa766354d436929af862678636ab9b2a33}{DIO\+\_\+\+PB4}}
+, \mbox{\hyperlink{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efaf3dc6c663f805d43f72c1b9eb49f3d16}{DIO\+\_\+\+PB5}}
+, \mbox{\hyperlink{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa43b83cbb15df781642867fc446a938c4}{DIO\+\_\+\+PB6}}
+, \mbox{\hyperlink{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efae550c6960818726ac225a54123606212}{DIO\+\_\+\+PB7}}
+, \newline
+\mbox{\hyperlink{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa88f745ff64780c77a9059b1a42d19828}{DIO\+\_\+\+PB8}}
+, \mbox{\hyperlink{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa1d858f97b2e22d64275d66f5c4f289ae}{DIO\+\_\+\+PB9}}
+, \mbox{\hyperlink{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa7a043f4ced0469bd2a810069f58d5422}{DIO\+\_\+\+PB10}}
+, \mbox{\hyperlink{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efab685e056bc1e6d9ded10ea32711b1a19}{DIO\+\_\+\+PB12}} = 12
+, \newline
+\mbox{\hyperlink{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa719d25fb2b63529b8c413ab2428e2d38}{DIO\+\_\+\+PB13}}
+, \mbox{\hyperlink{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa695b087537cd0dcda20db9223453b3d9}{DIO\+\_\+\+PB14}}
+, \mbox{\hyperlink{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa38f1971daf5592bb7e638adf1603f432}{DIO\+\_\+\+PB15}}
+, \mbox{\hyperlink{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa070e5f507d5832ffe20d03cda24c53cd}{DIO\+\_\+\+PC0}} = 0
+, \newline
+\mbox{\hyperlink{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa42841c1d3fb29489f7fe9c7fc9e3d51c}{DIO\+\_\+\+PC1}}
+, \mbox{\hyperlink{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa81f962a1e91576cf9ce48aadec1f22bf}{DIO\+\_\+\+PC2}}
+, \mbox{\hyperlink{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa8b0709bd655fa5202ff1b84ec1ed355d}{DIO\+\_\+\+PC3}}
+, \mbox{\hyperlink{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efaa3ea0535c48ebf91d405d718bdce2a0a}{DIO\+\_\+\+PC4}}
+, \newline
+\mbox{\hyperlink{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa10d7d3ea7b61d616ff435e126e9dadcb}{DIO\+\_\+\+PC5}}
+, \mbox{\hyperlink{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa63b05a89f26914740f1c9978a0b961b3}{DIO\+\_\+\+PC6}}
+, \mbox{\hyperlink{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efad8bceed160f6ecc8984387f5b5a9b071}{DIO\+\_\+\+PC7}}
+, \mbox{\hyperlink{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efad64f4f7380bd9f3ca51a01b21c8d3ab5}{DIO\+\_\+\+PC8}}
+, \newline
+\mbox{\hyperlink{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa7d8ed46547f1b490eaee53a8726f921d}{DIO\+\_\+\+PC9}}
+, \mbox{\hyperlink{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efaec7c4b28dccf172a0f81d0597a4b9ed1}{DIO\+\_\+\+PC10}}
+, \mbox{\hyperlink{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa58e822d2e757cce894eed4ca30eb69f6}{DIO\+\_\+\+PC11}}
+, \mbox{\hyperlink{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa4502e4e71993736489301c65cc3b6d45}{DIO\+\_\+\+PC12}}
+, \newline
+\mbox{\hyperlink{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa5d8c431d97006c93a1830d6dc5aa6b70}{DIO\+\_\+\+PC13}}
+, \mbox{\hyperlink{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa1083a6550eb9e25e3c61261d25dde2fc}{DIO\+\_\+\+PC14}}
+, \mbox{\hyperlink{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efab28fcedf846baf8b9081f9de8839733f}{DIO\+\_\+\+PC15}}
+, \mbox{\hyperlink{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa442e7c50376e677035bb772fea8f2fc3}{DIO\+\_\+\+PD2}} = 2
+, \newline
+\mbox{\hyperlink{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa37eceb9e929ab1a719c639504f1f3258}{DIO\+\_\+\+PH0}} = 0
+, \mbox{\hyperlink{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efaf95285c6061d6c9a464aab76c4484fb2}{DIO\+\_\+\+PH1}}
+, \mbox{\hyperlink{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efabb79ba564ddd0e44cbbc9ba74b0c599c}{DIO\+\_\+\+MAX\+\_\+\+PIN}} = 16
+ \}
+\item 
+enum \mbox{\hyperlink{dio__cfg_8h_acfdc903a5070db089697cf32d1e7406b}{Dio\+Mode\+\_\+t}} \{ \newline
+\mbox{\hyperlink{dio__cfg_8h_acfdc903a5070db089697cf32d1e7406ba99df54ee56f5a382d82021a4c76151a0}{DIO\+\_\+\+INPUT}}
+, \mbox{\hyperlink{dio__cfg_8h_acfdc903a5070db089697cf32d1e7406ba066013d99bf79a58f5bd736558b90e2c}{DIO\+\_\+\+OUTPUT}}
+, \mbox{\hyperlink{dio__cfg_8h_acfdc903a5070db089697cf32d1e7406ba5e48fc7915bca8f32e68418824c7e3b7}{DIO\+\_\+\+FUNCTION}}
+, \mbox{\hyperlink{dio__cfg_8h_acfdc903a5070db089697cf32d1e7406ba5bb9d5939c08d0e2612dbf7b70f059b7}{DIO\+\_\+\+ANALOG}}
+, \newline
+\mbox{\hyperlink{dio__cfg_8h_acfdc903a5070db089697cf32d1e7406ba989b0880234625e09ef5d4ab1cdc3a82}{DIO\+\_\+\+MAX\+\_\+\+MODE}}
+ \}
+\item 
+enum \mbox{\hyperlink{dio__cfg_8h_a50c66bd6f27b32ade420e80612abd20a}{Dio\+Type\+\_\+t}} \{ \mbox{\hyperlink{dio__cfg_8h_a50c66bd6f27b32ade420e80612abd20aaa09815466a75fc2652f110f646679171}{DIO\+\_\+\+PUSH\+\_\+\+PULL}}
+, \mbox{\hyperlink{dio__cfg_8h_a50c66bd6f27b32ade420e80612abd20aa3deceb80646f32014a44844c4852dd51}{DIO\+\_\+\+OPEN\+\_\+\+DRAIN}}
+, \mbox{\hyperlink{dio__cfg_8h_a50c66bd6f27b32ade420e80612abd20aa4fa89974b07d048eb25364233d59a9cb}{DIO\+\_\+\+MAX\+\_\+\+TYPE}}
+ \}
+\item 
+enum \mbox{\hyperlink{dio__cfg_8h_ac240182fe51c789b350cd2210010c011}{Dio\+Speed\+\_\+t}} \{ \newline
+\mbox{\hyperlink{dio__cfg_8h_ac240182fe51c789b350cd2210010c011ad52370bfa9deadd8456f4a5d051768cd}{DIO\+\_\+\+LOW\+\_\+\+SPEED}}
+, \mbox{\hyperlink{dio__cfg_8h_ac240182fe51c789b350cd2210010c011af6063ba3a19e8874a5abc43aeb3429aa}{DIO\+\_\+\+MEDIUM\+\_\+\+SPEED}}
+, \mbox{\hyperlink{dio__cfg_8h_ac240182fe51c789b350cd2210010c011a6020d70f50f8c4a0e497d1a34e5a8a26}{DIO\+\_\+\+HIGH\+\_\+\+SPEED}}
+, \mbox{\hyperlink{dio__cfg_8h_ac240182fe51c789b350cd2210010c011a5e86410cb11748c3010edc4962be1634}{DIO\+\_\+\+VERY\+\_\+\+SPEED}}
+, \newline
+\mbox{\hyperlink{dio__cfg_8h_ac240182fe51c789b350cd2210010c011a7d8b62c702a4b3714144890a2a5743c4}{DIO\+\_\+\+MAX\+\_\+\+SPEED}}
+ \}
+\item 
+enum \mbox{\hyperlink{dio__cfg_8h_a1abf871edd499ec4678030429f1f7036}{Dio\+Resistor\+\_\+t}} \{ \mbox{\hyperlink{dio__cfg_8h_a1abf871edd499ec4678030429f1f7036aef784b82b61e6cc3008e53e06cf957d6}{DIO\+\_\+\+NO\+\_\+\+RESISTOR}}
+, \mbox{\hyperlink{dio__cfg_8h_a1abf871edd499ec4678030429f1f7036a9ed51bcf87383d601c6b7c2654ab380f}{DIO\+\_\+\+PULLUP}}
+, \mbox{\hyperlink{dio__cfg_8h_a1abf871edd499ec4678030429f1f7036aed8e1ced6a3eedfae5ae23a7946a8f15}{DIO\+\_\+\+PULLDOWN}}
+, \mbox{\hyperlink{dio__cfg_8h_a1abf871edd499ec4678030429f1f7036af3bf3d7ffd33244681ab048ebec45bd7}{DIO\+\_\+\+MAX\+\_\+\+RESISTOR}}
+ \}
+\item 
+enum \mbox{\hyperlink{dio__cfg_8h_a9bba5b3e13a5bd739085ab0b0b03876d}{Dio\+Function\+\_\+t}} \{ \newline
+\mbox{\hyperlink{dio__cfg_8h_a9bba5b3e13a5bd739085ab0b0b03876da2d771fc3f2564a097aa23c9bf314b22e}{DIO\+\_\+\+AF0}}
+, \mbox{\hyperlink{dio__cfg_8h_a9bba5b3e13a5bd739085ab0b0b03876dab66e13999e75d158b56611fb341671cf}{DIO\+\_\+\+AF1}}
+, \mbox{\hyperlink{dio__cfg_8h_a9bba5b3e13a5bd739085ab0b0b03876da6466f9f540232580a33f17ddb813b531}{DIO\+\_\+\+AF2}}
+, \mbox{\hyperlink{dio__cfg_8h_a9bba5b3e13a5bd739085ab0b0b03876dace7e6014cdceb9744df8446a9876a8a1}{DIO\+\_\+\+AF3}}
+, \newline
+\mbox{\hyperlink{dio__cfg_8h_a9bba5b3e13a5bd739085ab0b0b03876da8c575937a35d0438c19bc5c7d12637bb}{DIO\+\_\+\+AF4}}
+, \mbox{\hyperlink{dio__cfg_8h_a9bba5b3e13a5bd739085ab0b0b03876dadcb16a6a4870c89e17b8557a8365238e}{DIO\+\_\+\+AF5}}
+, \mbox{\hyperlink{dio__cfg_8h_a9bba5b3e13a5bd739085ab0b0b03876da50d452a9da3ef8e22e18e2cefc902ffb}{DIO\+\_\+\+AF6}}
+, \mbox{\hyperlink{dio__cfg_8h_a9bba5b3e13a5bd739085ab0b0b03876da63319cc356f6bf402f7b4f49d40e2c8f}{DIO\+\_\+\+AF7}}
+, \newline
+\mbox{\hyperlink{dio__cfg_8h_a9bba5b3e13a5bd739085ab0b0b03876da0f345b3e4eb81eec461bfd4044d5cada}{DIO\+\_\+\+AF8}}
+, \mbox{\hyperlink{dio__cfg_8h_a9bba5b3e13a5bd739085ab0b0b03876dafd93bdc5b006eba2d8a079a0806c18fc}{DIO\+\_\+\+AF9}}
+, \mbox{\hyperlink{dio__cfg_8h_a9bba5b3e13a5bd739085ab0b0b03876da284d974908e984f32a5edfff33aa56e2}{DIO\+\_\+\+AF10}}
+, \mbox{\hyperlink{dio__cfg_8h_a9bba5b3e13a5bd739085ab0b0b03876daecc5df19b26d9d3eb1d493ff9fdf901f}{DIO\+\_\+\+AF11}}
+, \newline
+\mbox{\hyperlink{dio__cfg_8h_a9bba5b3e13a5bd739085ab0b0b03876da1ba91957d613029cb4cb16d7b9d4721b}{DIO\+\_\+\+AF12}}
+, \mbox{\hyperlink{dio__cfg_8h_a9bba5b3e13a5bd739085ab0b0b03876da02207e1abec4befaffa4df78a837d2a2}{DIO\+\_\+\+AF13}}
+, \mbox{\hyperlink{dio__cfg_8h_a9bba5b3e13a5bd739085ab0b0b03876da29de3e0816b32d692efa53477bf03f35}{DIO\+\_\+\+AF14}}
+, \mbox{\hyperlink{dio__cfg_8h_a9bba5b3e13a5bd739085ab0b0b03876daa06eb4121a527b63d40507aec7a11915}{DIO\+\_\+\+AF15}}
+, \newline
+\mbox{\hyperlink{dio__cfg_8h_a9bba5b3e13a5bd739085ab0b0b03876da34006dd88fb8d26b536c6579f26bb577}{DIO\+\_\+\+MAX\+\_\+\+FUNCTION}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{struct_dio_config__t}{Dio\+Config\+\_\+t}} $\ast$const \mbox{\hyperlink{dio__cfg_8h_ad94e4a3383df84c2eb51f941e343755b}{DIO\+\_\+config\+Get}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This module contains interface definitions for the Dio configuration. This is the header file for the definition of the interface for retrieving the digital input/output configuration table. 
+
+\begin{DoxyAuthor}{Author}
+Jose Luis Figueroa 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2023-\/03-\/16
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2023 Jose Luis Figueroa. MIT License. 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{dio__cfg_8h_a036f6751c226936e67f6693808b6a455}\label{dio__cfg_8h_a036f6751c226936e67f6693808b6a455}} 
+\index{dio\_cfg.h@{dio\_cfg.h}!NUMBER\_DIGITAL\_PINS@{NUMBER\_DIGITAL\_PINS}}
+\index{NUMBER\_DIGITAL\_PINS@{NUMBER\_DIGITAL\_PINS}!dio\_cfg.h@{dio\_cfg.h}}
+\doxysubsubsection{\texorpdfstring{NUMBER\_DIGITAL\_PINS}{NUMBER\_DIGITAL\_PINS}}
+{\footnotesize\ttfamily \#define NUMBER\+\_\+\+DIGITAL\+\_\+\+PINS~4}
+
+Set the value according with the number of digital input/output peripheral channel (pins) used. \mbox{\Hypertarget{dio__cfg_8h_a00f8a86f3bc21109096ba9da4712ac13}\label{dio__cfg_8h_a00f8a86f3bc21109096ba9da4712ac13}} 
+\index{dio\_cfg.h@{dio\_cfg.h}!NUMBER\_OF\_PORTS@{NUMBER\_OF\_PORTS}}
+\index{NUMBER\_OF\_PORTS@{NUMBER\_OF\_PORTS}!dio\_cfg.h@{dio\_cfg.h}}
+\doxysubsubsection{\texorpdfstring{NUMBER\_OF\_PORTS}{NUMBER\_OF\_PORTS}}
+{\footnotesize\ttfamily \#define NUMBER\+\_\+\+OF\+\_\+\+PORTS~5U}
+
+Defines the number of ports on the processor. 
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{dio__cfg_8h_a9bba5b3e13a5bd739085ab0b0b03876d}\label{dio__cfg_8h_a9bba5b3e13a5bd739085ab0b0b03876d}} 
+\index{dio\_cfg.h@{dio\_cfg.h}!DioFunction\_t@{DioFunction\_t}}
+\index{DioFunction\_t@{DioFunction\_t}!dio\_cfg.h@{dio\_cfg.h}}
+\doxysubsubsection{\texorpdfstring{DioFunction\_t}{DioFunction\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{dio__cfg_8h_a9bba5b3e13a5bd739085ab0b0b03876d}{Dio\+Function\+\_\+t}}}
+
+Defines the possible DIO alternate function. A multiplexer is used to select the alternate function \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_AF0@{DIO\_AF0}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_AF0@{DIO\_AF0}}}\mbox{\Hypertarget{dio__cfg_8h_a9bba5b3e13a5bd739085ab0b0b03876da2d771fc3f2564a097aa23c9bf314b22e}\label{dio__cfg_8h_a9bba5b3e13a5bd739085ab0b0b03876da2d771fc3f2564a097aa23c9bf314b22e}} 
+DIO\+\_\+\+AF0&Alternate function 0 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_AF1@{DIO\_AF1}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_AF1@{DIO\_AF1}}}\mbox{\Hypertarget{dio__cfg_8h_a9bba5b3e13a5bd739085ab0b0b03876dab66e13999e75d158b56611fb341671cf}\label{dio__cfg_8h_a9bba5b3e13a5bd739085ab0b0b03876dab66e13999e75d158b56611fb341671cf}} 
+DIO\+\_\+\+AF1&Alternate function 1 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_AF2@{DIO\_AF2}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_AF2@{DIO\_AF2}}}\mbox{\Hypertarget{dio__cfg_8h_a9bba5b3e13a5bd739085ab0b0b03876da6466f9f540232580a33f17ddb813b531}\label{dio__cfg_8h_a9bba5b3e13a5bd739085ab0b0b03876da6466f9f540232580a33f17ddb813b531}} 
+DIO\+\_\+\+AF2&Alternate function 2 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_AF3@{DIO\_AF3}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_AF3@{DIO\_AF3}}}\mbox{\Hypertarget{dio__cfg_8h_a9bba5b3e13a5bd739085ab0b0b03876dace7e6014cdceb9744df8446a9876a8a1}\label{dio__cfg_8h_a9bba5b3e13a5bd739085ab0b0b03876dace7e6014cdceb9744df8446a9876a8a1}} 
+DIO\+\_\+\+AF3&Alternate function 3 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_AF4@{DIO\_AF4}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_AF4@{DIO\_AF4}}}\mbox{\Hypertarget{dio__cfg_8h_a9bba5b3e13a5bd739085ab0b0b03876da8c575937a35d0438c19bc5c7d12637bb}\label{dio__cfg_8h_a9bba5b3e13a5bd739085ab0b0b03876da8c575937a35d0438c19bc5c7d12637bb}} 
+DIO\+\_\+\+AF4&Alternate function 4 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_AF5@{DIO\_AF5}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_AF5@{DIO\_AF5}}}\mbox{\Hypertarget{dio__cfg_8h_a9bba5b3e13a5bd739085ab0b0b03876dadcb16a6a4870c89e17b8557a8365238e}\label{dio__cfg_8h_a9bba5b3e13a5bd739085ab0b0b03876dadcb16a6a4870c89e17b8557a8365238e}} 
+DIO\+\_\+\+AF5&Alternate function 5 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_AF6@{DIO\_AF6}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_AF6@{DIO\_AF6}}}\mbox{\Hypertarget{dio__cfg_8h_a9bba5b3e13a5bd739085ab0b0b03876da50d452a9da3ef8e22e18e2cefc902ffb}\label{dio__cfg_8h_a9bba5b3e13a5bd739085ab0b0b03876da50d452a9da3ef8e22e18e2cefc902ffb}} 
+DIO\+\_\+\+AF6&Alternate function 6 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_AF7@{DIO\_AF7}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_AF7@{DIO\_AF7}}}\mbox{\Hypertarget{dio__cfg_8h_a9bba5b3e13a5bd739085ab0b0b03876da63319cc356f6bf402f7b4f49d40e2c8f}\label{dio__cfg_8h_a9bba5b3e13a5bd739085ab0b0b03876da63319cc356f6bf402f7b4f49d40e2c8f}} 
+DIO\+\_\+\+AF7&Alternate function 7 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_AF8@{DIO\_AF8}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_AF8@{DIO\_AF8}}}\mbox{\Hypertarget{dio__cfg_8h_a9bba5b3e13a5bd739085ab0b0b03876da0f345b3e4eb81eec461bfd4044d5cada}\label{dio__cfg_8h_a9bba5b3e13a5bd739085ab0b0b03876da0f345b3e4eb81eec461bfd4044d5cada}} 
+DIO\+\_\+\+AF8&Alternate function 8 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_AF9@{DIO\_AF9}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_AF9@{DIO\_AF9}}}\mbox{\Hypertarget{dio__cfg_8h_a9bba5b3e13a5bd739085ab0b0b03876dafd93bdc5b006eba2d8a079a0806c18fc}\label{dio__cfg_8h_a9bba5b3e13a5bd739085ab0b0b03876dafd93bdc5b006eba2d8a079a0806c18fc}} 
+DIO\+\_\+\+AF9&Alternate function 9 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_AF10@{DIO\_AF10}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_AF10@{DIO\_AF10}}}\mbox{\Hypertarget{dio__cfg_8h_a9bba5b3e13a5bd739085ab0b0b03876da284d974908e984f32a5edfff33aa56e2}\label{dio__cfg_8h_a9bba5b3e13a5bd739085ab0b0b03876da284d974908e984f32a5edfff33aa56e2}} 
+DIO\+\_\+\+AF10&Alternate function 10 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_AF11@{DIO\_AF11}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_AF11@{DIO\_AF11}}}\mbox{\Hypertarget{dio__cfg_8h_a9bba5b3e13a5bd739085ab0b0b03876daecc5df19b26d9d3eb1d493ff9fdf901f}\label{dio__cfg_8h_a9bba5b3e13a5bd739085ab0b0b03876daecc5df19b26d9d3eb1d493ff9fdf901f}} 
+DIO\+\_\+\+AF11&Alternate function 11 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_AF12@{DIO\_AF12}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_AF12@{DIO\_AF12}}}\mbox{\Hypertarget{dio__cfg_8h_a9bba5b3e13a5bd739085ab0b0b03876da1ba91957d613029cb4cb16d7b9d4721b}\label{dio__cfg_8h_a9bba5b3e13a5bd739085ab0b0b03876da1ba91957d613029cb4cb16d7b9d4721b}} 
+DIO\+\_\+\+AF12&Alternate function 12 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_AF13@{DIO\_AF13}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_AF13@{DIO\_AF13}}}\mbox{\Hypertarget{dio__cfg_8h_a9bba5b3e13a5bd739085ab0b0b03876da02207e1abec4befaffa4df78a837d2a2}\label{dio__cfg_8h_a9bba5b3e13a5bd739085ab0b0b03876da02207e1abec4befaffa4df78a837d2a2}} 
+DIO\+\_\+\+AF13&Alternate function 13 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_AF14@{DIO\_AF14}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_AF14@{DIO\_AF14}}}\mbox{\Hypertarget{dio__cfg_8h_a9bba5b3e13a5bd739085ab0b0b03876da29de3e0816b32d692efa53477bf03f35}\label{dio__cfg_8h_a9bba5b3e13a5bd739085ab0b0b03876da29de3e0816b32d692efa53477bf03f35}} 
+DIO\+\_\+\+AF14&Alternate function 14 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_AF15@{DIO\_AF15}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_AF15@{DIO\_AF15}}}\mbox{\Hypertarget{dio__cfg_8h_a9bba5b3e13a5bd739085ab0b0b03876daa06eb4121a527b63d40507aec7a11915}\label{dio__cfg_8h_a9bba5b3e13a5bd739085ab0b0b03876daa06eb4121a527b63d40507aec7a11915}} 
+DIO\+\_\+\+AF15&Alternate function 15 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_MAX\_FUNCTION@{DIO\_MAX\_FUNCTION}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_MAX\_FUNCTION@{DIO\_MAX\_FUNCTION}}}\mbox{\Hypertarget{dio__cfg_8h_a9bba5b3e13a5bd739085ab0b0b03876da34006dd88fb8d26b536c6579f26bb577}\label{dio__cfg_8h_a9bba5b3e13a5bd739085ab0b0b03876da34006dd88fb8d26b536c6579f26bb577}} 
+DIO\+\_\+\+MAX\+\_\+\+FUNCTION&Defines the maximum function value \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{dio__cfg_8h_acfdc903a5070db089697cf32d1e7406b}\label{dio__cfg_8h_acfdc903a5070db089697cf32d1e7406b}} 
+\index{dio\_cfg.h@{dio\_cfg.h}!DioMode\_t@{DioMode\_t}}
+\index{DioMode\_t@{DioMode\_t}!dio\_cfg.h@{dio\_cfg.h}}
+\doxysubsubsection{\texorpdfstring{DioMode\_t}{DioMode\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{dio__cfg_8h_acfdc903a5070db089697cf32d1e7406b}{Dio\+Mode\+\_\+t}}}
+
+Defines the mode of the Dio pin as an input, output, alternate function and analog. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_INPUT@{DIO\_INPUT}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_INPUT@{DIO\_INPUT}}}\mbox{\Hypertarget{dio__cfg_8h_acfdc903a5070db089697cf32d1e7406ba99df54ee56f5a382d82021a4c76151a0}\label{dio__cfg_8h_acfdc903a5070db089697cf32d1e7406ba99df54ee56f5a382d82021a4c76151a0}} 
+DIO\+\_\+\+INPUT&Input mode \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_OUTPUT@{DIO\_OUTPUT}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_OUTPUT@{DIO\_OUTPUT}}}\mbox{\Hypertarget{dio__cfg_8h_acfdc903a5070db089697cf32d1e7406ba066013d99bf79a58f5bd736558b90e2c}\label{dio__cfg_8h_acfdc903a5070db089697cf32d1e7406ba066013d99bf79a58f5bd736558b90e2c}} 
+DIO\+\_\+\+OUTPUT&General purpose Output mode \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_FUNCTION@{DIO\_FUNCTION}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_FUNCTION@{DIO\_FUNCTION}}}\mbox{\Hypertarget{dio__cfg_8h_acfdc903a5070db089697cf32d1e7406ba5e48fc7915bca8f32e68418824c7e3b7}\label{dio__cfg_8h_acfdc903a5070db089697cf32d1e7406ba5e48fc7915bca8f32e68418824c7e3b7}} 
+DIO\+\_\+\+FUNCTION&Alternate function mode \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_ANALOG@{DIO\_ANALOG}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_ANALOG@{DIO\_ANALOG}}}\mbox{\Hypertarget{dio__cfg_8h_acfdc903a5070db089697cf32d1e7406ba5bb9d5939c08d0e2612dbf7b70f059b7}\label{dio__cfg_8h_acfdc903a5070db089697cf32d1e7406ba5bb9d5939c08d0e2612dbf7b70f059b7}} 
+DIO\+\_\+\+ANALOG&Analog mode \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_MAX\_MODE@{DIO\_MAX\_MODE}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_MAX\_MODE@{DIO\_MAX\_MODE}}}\mbox{\Hypertarget{dio__cfg_8h_acfdc903a5070db089697cf32d1e7406ba989b0880234625e09ef5d4ab1cdc3a82}\label{dio__cfg_8h_acfdc903a5070db089697cf32d1e7406ba989b0880234625e09ef5d4ab1cdc3a82}} 
+DIO\+\_\+\+MAX\+\_\+\+MODE&Defines the maximum mode \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9ef}\label{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9ef}} 
+\index{dio\_cfg.h@{dio\_cfg.h}!DioPin\_t@{DioPin\_t}}
+\index{DioPin\_t@{DioPin\_t}!dio\_cfg.h@{dio\_cfg.h}}
+\doxysubsubsection{\texorpdfstring{DioPin\_t}{DioPin\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9ef}{Dio\+Pin\+\_\+t}}}
+
+Defines all the pins contained on the MCU device. It is used to set a specific bit on the ports. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_PA0@{DIO\_PA0}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_PA0@{DIO\_PA0}}}\mbox{\Hypertarget{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efaf807cd7c83c25e764706da288187854b}\label{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efaf807cd7c83c25e764706da288187854b}} 
+DIO\+\_\+\+PA0&PA0 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_PA1@{DIO\_PA1}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_PA1@{DIO\_PA1}}}\mbox{\Hypertarget{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efad00fe9478d40d9afd26a446032739be0}\label{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efad00fe9478d40d9afd26a446032739be0}} 
+DIO\+\_\+\+PA1&PA1 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_PA2@{DIO\_PA2}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_PA2@{DIO\_PA2}}}\mbox{\Hypertarget{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efaa18a7444b6d919dbf637de2ad438c34e}\label{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efaa18a7444b6d919dbf637de2ad438c34e}} 
+DIO\+\_\+\+PA2&PA2 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_PA3@{DIO\_PA3}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_PA3@{DIO\_PA3}}}\mbox{\Hypertarget{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efaadd606b3c2efbe2991f2d7adc46c1b3f}\label{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efaadd606b3c2efbe2991f2d7adc46c1b3f}} 
+DIO\+\_\+\+PA3&PA3 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_PA4@{DIO\_PA4}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_PA4@{DIO\_PA4}}}\mbox{\Hypertarget{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa272105777833b00a8c62e95f3c46951d}\label{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa272105777833b00a8c62e95f3c46951d}} 
+DIO\+\_\+\+PA4&PA4 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_PA5@{DIO\_PA5}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_PA5@{DIO\_PA5}}}\mbox{\Hypertarget{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efabb0375c0a73b8254ab3ccf2ee2cabdc6}\label{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efabb0375c0a73b8254ab3ccf2ee2cabdc6}} 
+DIO\+\_\+\+PA5&PA5 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_PA6@{DIO\_PA6}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_PA6@{DIO\_PA6}}}\mbox{\Hypertarget{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa571175d91104776aad0b7b4106f8d805}\label{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa571175d91104776aad0b7b4106f8d805}} 
+DIO\+\_\+\+PA6&PA6 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_PA7@{DIO\_PA7}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_PA7@{DIO\_PA7}}}\mbox{\Hypertarget{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efab64595f661d9ee8459027eb479a0075d}\label{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efab64595f661d9ee8459027eb479a0075d}} 
+DIO\+\_\+\+PA7&PA7 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_PA8@{DIO\_PA8}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_PA8@{DIO\_PA8}}}\mbox{\Hypertarget{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efab837df72b2aa3e239e3ba8f0f28660ce}\label{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efab837df72b2aa3e239e3ba8f0f28660ce}} 
+DIO\+\_\+\+PA8&PA8 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_PA9@{DIO\_PA9}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_PA9@{DIO\_PA9}}}\mbox{\Hypertarget{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efaad00b64db1e0c31b8146c74109c4fba1}\label{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efaad00b64db1e0c31b8146c74109c4fba1}} 
+DIO\+\_\+\+PA9&PA9 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_PA10@{DIO\_PA10}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_PA10@{DIO\_PA10}}}\mbox{\Hypertarget{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efafa579fb76d08e3697dd8bc4b43bc7800}\label{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efafa579fb76d08e3697dd8bc4b43bc7800}} 
+DIO\+\_\+\+PA10&PA10 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_PA11@{DIO\_PA11}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_PA11@{DIO\_PA11}}}\mbox{\Hypertarget{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efae777e2079faaef6cde8bf0a616c0e8cb}\label{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efae777e2079faaef6cde8bf0a616c0e8cb}} 
+DIO\+\_\+\+PA11&PA11 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_PA12@{DIO\_PA12}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_PA12@{DIO\_PA12}}}\mbox{\Hypertarget{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa338778de80c98a6ba559b064434863c0}\label{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa338778de80c98a6ba559b064434863c0}} 
+DIO\+\_\+\+PA12&PA12 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_PA13@{DIO\_PA13}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_PA13@{DIO\_PA13}}}\mbox{\Hypertarget{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa5b1b8799960582e1ca7f63e97b161efb}\label{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa5b1b8799960582e1ca7f63e97b161efb}} 
+DIO\+\_\+\+PA13&PA13 SWD (NC) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_PA14@{DIO\_PA14}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_PA14@{DIO\_PA14}}}\mbox{\Hypertarget{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa472788b7add7d63ae8e0eb79aff16eb4}\label{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa472788b7add7d63ae8e0eb79aff16eb4}} 
+DIO\+\_\+\+PA14&PA14 SWD (NC) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_PA15@{DIO\_PA15}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_PA15@{DIO\_PA15}}}\mbox{\Hypertarget{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa721ba5dea56d215ea2011c1633d963b5}\label{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa721ba5dea56d215ea2011c1633d963b5}} 
+DIO\+\_\+\+PA15&PA15 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_PB0@{DIO\_PB0}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_PB0@{DIO\_PB0}}}\mbox{\Hypertarget{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa3c8504d755565b5dfc47067622dc7039}\label{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa3c8504d755565b5dfc47067622dc7039}} 
+DIO\+\_\+\+PB0&PB0 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_PB1@{DIO\_PB1}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_PB1@{DIO\_PB1}}}\mbox{\Hypertarget{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efac29e03eba3ae55e343ca3e59363b35e7}\label{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efac29e03eba3ae55e343ca3e59363b35e7}} 
+DIO\+\_\+\+PB1&PB1 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_PB2@{DIO\_PB2}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_PB2@{DIO\_PB2}}}\mbox{\Hypertarget{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa95a9d013969310c2d6547c034f1f9159}\label{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa95a9d013969310c2d6547c034f1f9159}} 
+DIO\+\_\+\+PB2&PB2 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_PB3@{DIO\_PB3}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_PB3@{DIO\_PB3}}}\mbox{\Hypertarget{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa9f931f65a4455996bfb6fdc7d37117ab}\label{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa9f931f65a4455996bfb6fdc7d37117ab}} 
+DIO\+\_\+\+PB3&PB3 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_PB4@{DIO\_PB4}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_PB4@{DIO\_PB4}}}\mbox{\Hypertarget{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa766354d436929af862678636ab9b2a33}\label{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa766354d436929af862678636ab9b2a33}} 
+DIO\+\_\+\+PB4&PB4 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_PB5@{DIO\_PB5}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_PB5@{DIO\_PB5}}}\mbox{\Hypertarget{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efaf3dc6c663f805d43f72c1b9eb49f3d16}\label{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efaf3dc6c663f805d43f72c1b9eb49f3d16}} 
+DIO\+\_\+\+PB5&PB5 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_PB6@{DIO\_PB6}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_PB6@{DIO\_PB6}}}\mbox{\Hypertarget{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa43b83cbb15df781642867fc446a938c4}\label{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa43b83cbb15df781642867fc446a938c4}} 
+DIO\+\_\+\+PB6&PB6 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_PB7@{DIO\_PB7}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_PB7@{DIO\_PB7}}}\mbox{\Hypertarget{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efae550c6960818726ac225a54123606212}\label{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efae550c6960818726ac225a54123606212}} 
+DIO\+\_\+\+PB7&PB7 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_PB8@{DIO\_PB8}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_PB8@{DIO\_PB8}}}\mbox{\Hypertarget{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa88f745ff64780c77a9059b1a42d19828}\label{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa88f745ff64780c77a9059b1a42d19828}} 
+DIO\+\_\+\+PB8&PB8 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_PB9@{DIO\_PB9}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_PB9@{DIO\_PB9}}}\mbox{\Hypertarget{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa1d858f97b2e22d64275d66f5c4f289ae}\label{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa1d858f97b2e22d64275d66f5c4f289ae}} 
+DIO\+\_\+\+PB9&PB9 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_PB10@{DIO\_PB10}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_PB10@{DIO\_PB10}}}\mbox{\Hypertarget{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa7a043f4ced0469bd2a810069f58d5422}\label{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa7a043f4ced0469bd2a810069f58d5422}} 
+DIO\+\_\+\+PB10&PB10 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_PB12@{DIO\_PB12}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_PB12@{DIO\_PB12}}}\mbox{\Hypertarget{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efab685e056bc1e6d9ded10ea32711b1a19}\label{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efab685e056bc1e6d9ded10ea32711b1a19}} 
+DIO\+\_\+\+PB12&PB12 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_PB13@{DIO\_PB13}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_PB13@{DIO\_PB13}}}\mbox{\Hypertarget{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa719d25fb2b63529b8c413ab2428e2d38}\label{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa719d25fb2b63529b8c413ab2428e2d38}} 
+DIO\+\_\+\+PB13&PB13 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_PB14@{DIO\_PB14}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_PB14@{DIO\_PB14}}}\mbox{\Hypertarget{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa695b087537cd0dcda20db9223453b3d9}\label{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa695b087537cd0dcda20db9223453b3d9}} 
+DIO\+\_\+\+PB14&PB14 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_PB15@{DIO\_PB15}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_PB15@{DIO\_PB15}}}\mbox{\Hypertarget{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa38f1971daf5592bb7e638adf1603f432}\label{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa38f1971daf5592bb7e638adf1603f432}} 
+DIO\+\_\+\+PB15&PB15 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_PC0@{DIO\_PC0}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_PC0@{DIO\_PC0}}}\mbox{\Hypertarget{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa070e5f507d5832ffe20d03cda24c53cd}\label{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa070e5f507d5832ffe20d03cda24c53cd}} 
+DIO\+\_\+\+PC0&PC0 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_PC1@{DIO\_PC1}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_PC1@{DIO\_PC1}}}\mbox{\Hypertarget{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa42841c1d3fb29489f7fe9c7fc9e3d51c}\label{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa42841c1d3fb29489f7fe9c7fc9e3d51c}} 
+DIO\+\_\+\+PC1&PC1 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_PC2@{DIO\_PC2}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_PC2@{DIO\_PC2}}}\mbox{\Hypertarget{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa81f962a1e91576cf9ce48aadec1f22bf}\label{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa81f962a1e91576cf9ce48aadec1f22bf}} 
+DIO\+\_\+\+PC2&PC2 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_PC3@{DIO\_PC3}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_PC3@{DIO\_PC3}}}\mbox{\Hypertarget{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa8b0709bd655fa5202ff1b84ec1ed355d}\label{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa8b0709bd655fa5202ff1b84ec1ed355d}} 
+DIO\+\_\+\+PC3&PC3 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_PC4@{DIO\_PC4}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_PC4@{DIO\_PC4}}}\mbox{\Hypertarget{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efaa3ea0535c48ebf91d405d718bdce2a0a}\label{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efaa3ea0535c48ebf91d405d718bdce2a0a}} 
+DIO\+\_\+\+PC4&PC4 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_PC5@{DIO\_PC5}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_PC5@{DIO\_PC5}}}\mbox{\Hypertarget{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa10d7d3ea7b61d616ff435e126e9dadcb}\label{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa10d7d3ea7b61d616ff435e126e9dadcb}} 
+DIO\+\_\+\+PC5&PC5 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_PC6@{DIO\_PC6}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_PC6@{DIO\_PC6}}}\mbox{\Hypertarget{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa63b05a89f26914740f1c9978a0b961b3}\label{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa63b05a89f26914740f1c9978a0b961b3}} 
+DIO\+\_\+\+PC6&PC6 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_PC7@{DIO\_PC7}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_PC7@{DIO\_PC7}}}\mbox{\Hypertarget{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efad8bceed160f6ecc8984387f5b5a9b071}\label{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efad8bceed160f6ecc8984387f5b5a9b071}} 
+DIO\+\_\+\+PC7&PC7 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_PC8@{DIO\_PC8}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_PC8@{DIO\_PC8}}}\mbox{\Hypertarget{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efad64f4f7380bd9f3ca51a01b21c8d3ab5}\label{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efad64f4f7380bd9f3ca51a01b21c8d3ab5}} 
+DIO\+\_\+\+PC8&PC8 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_PC9@{DIO\_PC9}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_PC9@{DIO\_PC9}}}\mbox{\Hypertarget{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa7d8ed46547f1b490eaee53a8726f921d}\label{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa7d8ed46547f1b490eaee53a8726f921d}} 
+DIO\+\_\+\+PC9&PC9 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_PC10@{DIO\_PC10}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_PC10@{DIO\_PC10}}}\mbox{\Hypertarget{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efaec7c4b28dccf172a0f81d0597a4b9ed1}\label{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efaec7c4b28dccf172a0f81d0597a4b9ed1}} 
+DIO\+\_\+\+PC10&PC10 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_PC11@{DIO\_PC11}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_PC11@{DIO\_PC11}}}\mbox{\Hypertarget{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa58e822d2e757cce894eed4ca30eb69f6}\label{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa58e822d2e757cce894eed4ca30eb69f6}} 
+DIO\+\_\+\+PC11&PC11 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_PC12@{DIO\_PC12}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_PC12@{DIO\_PC12}}}\mbox{\Hypertarget{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa4502e4e71993736489301c65cc3b6d45}\label{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa4502e4e71993736489301c65cc3b6d45}} 
+DIO\+\_\+\+PC12&PC12 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_PC13@{DIO\_PC13}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_PC13@{DIO\_PC13}}}\mbox{\Hypertarget{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa5d8c431d97006c93a1830d6dc5aa6b70}\label{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa5d8c431d97006c93a1830d6dc5aa6b70}} 
+DIO\+\_\+\+PC13&PC13 Push button \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_PC14@{DIO\_PC14}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_PC14@{DIO\_PC14}}}\mbox{\Hypertarget{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa1083a6550eb9e25e3c61261d25dde2fc}\label{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa1083a6550eb9e25e3c61261d25dde2fc}} 
+DIO\+\_\+\+PC14&PC14 OSC32\+\_\+\+IN \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_PC15@{DIO\_PC15}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_PC15@{DIO\_PC15}}}\mbox{\Hypertarget{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efab28fcedf846baf8b9081f9de8839733f}\label{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efab28fcedf846baf8b9081f9de8839733f}} 
+DIO\+\_\+\+PC15&PC15 OSC32\+\_\+\+OUT \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_PD2@{DIO\_PD2}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_PD2@{DIO\_PD2}}}\mbox{\Hypertarget{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa442e7c50376e677035bb772fea8f2fc3}\label{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa442e7c50376e677035bb772fea8f2fc3}} 
+DIO\+\_\+\+PD2&PD2 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_PH0@{DIO\_PH0}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_PH0@{DIO\_PH0}}}\mbox{\Hypertarget{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa37eceb9e929ab1a719c639504f1f3258}\label{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efa37eceb9e929ab1a719c639504f1f3258}} 
+DIO\+\_\+\+PH0&PH0 OSC\+\_\+\+IN \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_PH1@{DIO\_PH1}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_PH1@{DIO\_PH1}}}\mbox{\Hypertarget{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efaf95285c6061d6c9a464aab76c4484fb2}\label{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efaf95285c6061d6c9a464aab76c4484fb2}} 
+DIO\+\_\+\+PH1&PH1 OSC\+\_\+\+OUT \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_MAX\_PIN@{DIO\_MAX\_PIN}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_MAX\_PIN@{DIO\_MAX\_PIN}}}\mbox{\Hypertarget{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efabb79ba564ddd0e44cbbc9ba74b0c599c}\label{dio__cfg_8h_af0645afc6cc3c26ff8e3d75477dbc9efabb79ba564ddd0e44cbbc9ba74b0c599c}} 
+DIO\+\_\+\+MAX\+\_\+\+PIN&Defines the maximum pin value \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{dio__cfg_8h_acccd72f1da55a79911ba97e4cf3c176f}\label{dio__cfg_8h_acccd72f1da55a79911ba97e4cf3c176f}} 
+\index{dio\_cfg.h@{dio\_cfg.h}!DioPinState\_t@{DioPinState\_t}}
+\index{DioPinState\_t@{DioPinState\_t}!dio\_cfg.h@{dio\_cfg.h}}
+\doxysubsubsection{\texorpdfstring{DioPinState\_t}{DioPinState\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{dio__cfg_8h_acccd72f1da55a79911ba97e4cf3c176f}{Dio\+Pin\+State\+\_\+t}}}
+
+Defines the possible states for a digital output pin. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_LOW@{DIO\_LOW}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_LOW@{DIO\_LOW}}}\mbox{\Hypertarget{dio__cfg_8h_acccd72f1da55a79911ba97e4cf3c176fa37170fc54a8b1022c388eb53f5862306}\label{dio__cfg_8h_acccd72f1da55a79911ba97e4cf3c176fa37170fc54a8b1022c388eb53f5862306}} 
+DIO\+\_\+\+LOW&Defines digital state ground \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_HIGH@{DIO\_HIGH}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_HIGH@{DIO\_HIGH}}}\mbox{\Hypertarget{dio__cfg_8h_acccd72f1da55a79911ba97e4cf3c176fa8037821f04472a22be2178ffc2883242}\label{dio__cfg_8h_acccd72f1da55a79911ba97e4cf3c176fa8037821f04472a22be2178ffc2883242}} 
+DIO\+\_\+\+HIGH&Defines digital state power \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_PIN\_STATE\_MAX@{DIO\_PIN\_STATE\_MAX}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_PIN\_STATE\_MAX@{DIO\_PIN\_STATE\_MAX}}}\mbox{\Hypertarget{dio__cfg_8h_acccd72f1da55a79911ba97e4cf3c176fa1af74a2c01fc4eebd4b2aa89e5faf196}\label{dio__cfg_8h_acccd72f1da55a79911ba97e4cf3c176fa1af74a2c01fc4eebd4b2aa89e5faf196}} 
+DIO\+\_\+\+PIN\+\_\+\+STATE\+\_\+\+MAX&Defines the maximum digital state \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{dio__cfg_8h_abe5dc700bc4d664a1c594968ea8ae9b2}\label{dio__cfg_8h_abe5dc700bc4d664a1c594968ea8ae9b2}} 
+\index{dio\_cfg.h@{dio\_cfg.h}!DioPort\_t@{DioPort\_t}}
+\index{DioPort\_t@{DioPort\_t}!dio\_cfg.h@{dio\_cfg.h}}
+\doxysubsubsection{\texorpdfstring{DioPort\_t}{DioPort\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{dio__cfg_8h_abe5dc700bc4d664a1c594968ea8ae9b2}{Dio\+Port\+\_\+t}}}
+
+Define the ports contained on the MCU device. It is used to identify the specific port GPIO to configure the register map. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_PA@{DIO\_PA}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_PA@{DIO\_PA}}}\mbox{\Hypertarget{dio__cfg_8h_abe5dc700bc4d664a1c594968ea8ae9b2af9be5fca1bf8343526a7854be6d1a5af}\label{dio__cfg_8h_abe5dc700bc4d664a1c594968ea8ae9b2af9be5fca1bf8343526a7854be6d1a5af}} 
+DIO\+\_\+\+PA&Port A \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_PB@{DIO\_PB}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_PB@{DIO\_PB}}}\mbox{\Hypertarget{dio__cfg_8h_abe5dc700bc4d664a1c594968ea8ae9b2a02a12ed5fbaf448e62628510acb839f6}\label{dio__cfg_8h_abe5dc700bc4d664a1c594968ea8ae9b2a02a12ed5fbaf448e62628510acb839f6}} 
+DIO\+\_\+\+PB&Port B \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_PC@{DIO\_PC}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_PC@{DIO\_PC}}}\mbox{\Hypertarget{dio__cfg_8h_abe5dc700bc4d664a1c594968ea8ae9b2aba081051d7cf8fc6476576f371457360}\label{dio__cfg_8h_abe5dc700bc4d664a1c594968ea8ae9b2aba081051d7cf8fc6476576f371457360}} 
+DIO\+\_\+\+PC&Port C \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_PD@{DIO\_PD}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_PD@{DIO\_PD}}}\mbox{\Hypertarget{dio__cfg_8h_abe5dc700bc4d664a1c594968ea8ae9b2a88aec3f74bb032ac74dd249180adb790}\label{dio__cfg_8h_abe5dc700bc4d664a1c594968ea8ae9b2a88aec3f74bb032ac74dd249180adb790}} 
+DIO\+\_\+\+PD&Port D \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_PH@{DIO\_PH}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_PH@{DIO\_PH}}}\mbox{\Hypertarget{dio__cfg_8h_abe5dc700bc4d664a1c594968ea8ae9b2a5cefb557d716b12627b8729eeb90e22b}\label{dio__cfg_8h_abe5dc700bc4d664a1c594968ea8ae9b2a5cefb557d716b12627b8729eeb90e22b}} 
+DIO\+\_\+\+PH&Port H \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_MAX\_PORT@{DIO\_MAX\_PORT}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_MAX\_PORT@{DIO\_MAX\_PORT}}}\mbox{\Hypertarget{dio__cfg_8h_abe5dc700bc4d664a1c594968ea8ae9b2adc9f13fc72aa1c0a2e0313531fdd7050}\label{dio__cfg_8h_abe5dc700bc4d664a1c594968ea8ae9b2adc9f13fc72aa1c0a2e0313531fdd7050}} 
+DIO\+\_\+\+MAX\+\_\+\+PORT&Defines the maximum Port \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{dio__cfg_8h_a1abf871edd499ec4678030429f1f7036}\label{dio__cfg_8h_a1abf871edd499ec4678030429f1f7036}} 
+\index{dio\_cfg.h@{dio\_cfg.h}!DioResistor\_t@{DioResistor\_t}}
+\index{DioResistor\_t@{DioResistor\_t}!dio\_cfg.h@{dio\_cfg.h}}
+\doxysubsubsection{\texorpdfstring{DioResistor\_t}{DioResistor\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{dio__cfg_8h_a1abf871edd499ec4678030429f1f7036}{Dio\+Resistor\+\_\+t}}}
+
+Defines the possible states of the channel pull-\/ups. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_NO\_RESISTOR@{DIO\_NO\_RESISTOR}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_NO\_RESISTOR@{DIO\_NO\_RESISTOR}}}\mbox{\Hypertarget{dio__cfg_8h_a1abf871edd499ec4678030429f1f7036aef784b82b61e6cc3008e53e06cf957d6}\label{dio__cfg_8h_a1abf871edd499ec4678030429f1f7036aef784b82b61e6cc3008e53e06cf957d6}} 
+DIO\+\_\+\+NO\+\_\+\+RESISTOR&Used to disable the internal resistor \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_PULLUP@{DIO\_PULLUP}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_PULLUP@{DIO\_PULLUP}}}\mbox{\Hypertarget{dio__cfg_8h_a1abf871edd499ec4678030429f1f7036a9ed51bcf87383d601c6b7c2654ab380f}\label{dio__cfg_8h_a1abf871edd499ec4678030429f1f7036a9ed51bcf87383d601c6b7c2654ab380f}} 
+DIO\+\_\+\+PULLUP&Used to enable the internal pull-\/up \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_PULLDOWN@{DIO\_PULLDOWN}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_PULLDOWN@{DIO\_PULLDOWN}}}\mbox{\Hypertarget{dio__cfg_8h_a1abf871edd499ec4678030429f1f7036aed8e1ced6a3eedfae5ae23a7946a8f15}\label{dio__cfg_8h_a1abf871edd499ec4678030429f1f7036aed8e1ced6a3eedfae5ae23a7946a8f15}} 
+DIO\+\_\+\+PULLDOWN&Used to enable the internal pull-\/down \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_MAX\_RESISTOR@{DIO\_MAX\_RESISTOR}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_MAX\_RESISTOR@{DIO\_MAX\_RESISTOR}}}\mbox{\Hypertarget{dio__cfg_8h_a1abf871edd499ec4678030429f1f7036af3bf3d7ffd33244681ab048ebec45bd7}\label{dio__cfg_8h_a1abf871edd499ec4678030429f1f7036af3bf3d7ffd33244681ab048ebec45bd7}} 
+DIO\+\_\+\+MAX\+\_\+\+RESISTOR&Defines the maximum resistor value \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{dio__cfg_8h_ac240182fe51c789b350cd2210010c011}\label{dio__cfg_8h_ac240182fe51c789b350cd2210010c011}} 
+\index{dio\_cfg.h@{dio\_cfg.h}!DioSpeed\_t@{DioSpeed\_t}}
+\index{DioSpeed\_t@{DioSpeed\_t}!dio\_cfg.h@{dio\_cfg.h}}
+\doxysubsubsection{\texorpdfstring{DioSpeed\_t}{DioSpeed\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{dio__cfg_8h_ac240182fe51c789b350cd2210010c011}{Dio\+Speed\+\_\+t}}}
+
+Defines the output speed settings available \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_LOW\_SPEED@{DIO\_LOW\_SPEED}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_LOW\_SPEED@{DIO\_LOW\_SPEED}}}\mbox{\Hypertarget{dio__cfg_8h_ac240182fe51c789b350cd2210010c011ad52370bfa9deadd8456f4a5d051768cd}\label{dio__cfg_8h_ac240182fe51c789b350cd2210010c011ad52370bfa9deadd8456f4a5d051768cd}} 
+DIO\+\_\+\+LOW\+\_\+\+SPEED&Low speed is configured on the pin \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_MEDIUM\_SPEED@{DIO\_MEDIUM\_SPEED}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_MEDIUM\_SPEED@{DIO\_MEDIUM\_SPEED}}}\mbox{\Hypertarget{dio__cfg_8h_ac240182fe51c789b350cd2210010c011af6063ba3a19e8874a5abc43aeb3429aa}\label{dio__cfg_8h_ac240182fe51c789b350cd2210010c011af6063ba3a19e8874a5abc43aeb3429aa}} 
+DIO\+\_\+\+MEDIUM\+\_\+\+SPEED&Medium speed is configured on the pin \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_HIGH\_SPEED@{DIO\_HIGH\_SPEED}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_HIGH\_SPEED@{DIO\_HIGH\_SPEED}}}\mbox{\Hypertarget{dio__cfg_8h_ac240182fe51c789b350cd2210010c011a6020d70f50f8c4a0e497d1a34e5a8a26}\label{dio__cfg_8h_ac240182fe51c789b350cd2210010c011a6020d70f50f8c4a0e497d1a34e5a8a26}} 
+DIO\+\_\+\+HIGH\+\_\+\+SPEED&High speed is configured on the pin \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_VERY\_SPEED@{DIO\_VERY\_SPEED}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_VERY\_SPEED@{DIO\_VERY\_SPEED}}}\mbox{\Hypertarget{dio__cfg_8h_ac240182fe51c789b350cd2210010c011a5e86410cb11748c3010edc4962be1634}\label{dio__cfg_8h_ac240182fe51c789b350cd2210010c011a5e86410cb11748c3010edc4962be1634}} 
+DIO\+\_\+\+VERY\+\_\+\+SPEED&Very speed is configured on the pin \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_MAX\_SPEED@{DIO\_MAX\_SPEED}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_MAX\_SPEED@{DIO\_MAX\_SPEED}}}\mbox{\Hypertarget{dio__cfg_8h_ac240182fe51c789b350cd2210010c011a7d8b62c702a4b3714144890a2a5743c4}\label{dio__cfg_8h_ac240182fe51c789b350cd2210010c011a7d8b62c702a4b3714144890a2a5743c4}} 
+DIO\+\_\+\+MAX\+\_\+\+SPEED&Defines the maximum output speed \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{dio__cfg_8h_a50c66bd6f27b32ade420e80612abd20a}\label{dio__cfg_8h_a50c66bd6f27b32ade420e80612abd20a}} 
+\index{dio\_cfg.h@{dio\_cfg.h}!DioType\_t@{DioType\_t}}
+\index{DioType\_t@{DioType\_t}!dio\_cfg.h@{dio\_cfg.h}}
+\doxysubsubsection{\texorpdfstring{DioType\_t}{DioType\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{dio__cfg_8h_a50c66bd6f27b32ade420e80612abd20a}{Dio\+Type\+\_\+t}}}
+
+Define the output type of the Input/output port. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_PUSH\_PULL@{DIO\_PUSH\_PULL}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_PUSH\_PULL@{DIO\_PUSH\_PULL}}}\mbox{\Hypertarget{dio__cfg_8h_a50c66bd6f27b32ade420e80612abd20aaa09815466a75fc2652f110f646679171}\label{dio__cfg_8h_a50c66bd6f27b32ade420e80612abd20aaa09815466a75fc2652f110f646679171}} 
+DIO\+\_\+\+PUSH\+\_\+\+PULL&Enable output push-\/pull \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_OPEN\_DRAIN@{DIO\_OPEN\_DRAIN}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_OPEN\_DRAIN@{DIO\_OPEN\_DRAIN}}}\mbox{\Hypertarget{dio__cfg_8h_a50c66bd6f27b32ade420e80612abd20aa3deceb80646f32014a44844c4852dd51}\label{dio__cfg_8h_a50c66bd6f27b32ade420e80612abd20aa3deceb80646f32014a44844c4852dd51}} 
+DIO\+\_\+\+OPEN\+\_\+\+DRAIN&Enable output open-\/drain \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DIO\_MAX\_TYPE@{DIO\_MAX\_TYPE}!dio\_cfg.h@{dio\_cfg.h}}\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_MAX\_TYPE@{DIO\_MAX\_TYPE}}}\mbox{\Hypertarget{dio__cfg_8h_a50c66bd6f27b32ade420e80612abd20aa4fa89974b07d048eb25364233d59a9cb}\label{dio__cfg_8h_a50c66bd6f27b32ade420e80612abd20aa4fa89974b07d048eb25364233d59a9cb}} 
+DIO\+\_\+\+MAX\+\_\+\+TYPE&Defines the maximum output type \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{dio__cfg_8h_ad94e4a3383df84c2eb51f941e343755b}\label{dio__cfg_8h_ad94e4a3383df84c2eb51f941e343755b}} 
+\index{dio\_cfg.h@{dio\_cfg.h}!DIO\_configGet@{DIO\_configGet}}
+\index{DIO\_configGet@{DIO\_configGet}!dio\_cfg.h@{dio\_cfg.h}}
+\doxysubsubsection{\texorpdfstring{DIO\_configGet()}{DIO\_configGet()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_dio_config__t}{Dio\+Config\+\_\+t}} $\ast$const DIO\+\_\+config\+Get (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+{\bfseries{Description\+:}} This function is used to initialize the DIO based on the configuration table defined in dio\+\_\+cfg module.
+
+PRE-\/\+CONDITION\+: configuration table needs to be populated (sizeof \texorpdfstring{$>$}{>} 0) POST-\/\+CONDITION\+: A constant pointer to the first member of the ~\newline
+ configuration table will be returned. \begin{DoxyReturn}{Returns}
+A pointer to the configuration table.
+\end{DoxyReturn}
+{\bfseries{Example\+:}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{const}\ Dio\_ConfigType\_t\ *\ \textcolor{keyword}{const}\ \mbox{\hyperlink{dio__cfg_8c_ad606ed583fbec9d0749c319c717a65f1}{DioConfig}}\ =\ \mbox{\hyperlink{dio__cfg_8c_ad94e4a3383df84c2eb51f941e343755b}{DIO\_configGet}}();}
+\DoxyCodeLine{}
+\DoxyCodeLine{DIO\_Init(\mbox{\hyperlink{dio__cfg_8c_ad606ed583fbec9d0749c319c717a65f1}{DioConfig}});}
+
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{dio_8c_aebe782dff96e21ec5192e3056ca8d88b}{DIO\+\_\+init}} 
+
+DIO\+\_\+channel\+Read 
+
+DIO\+\_\+channel\+Write 
+
+DIO\+\_\+channel\+Toggle 
+
+\mbox{\hyperlink{dio_8c_af155115944633a5e1df9dade3787e799}{DIO\+\_\+register\+Write}} 
+
+\mbox{\hyperlink{dio_8c_acb402f0cb510766d39ddb676bdb782bb}{DIO\+\_\+register\+Read}} 
+\end{DoxySeeAlso}

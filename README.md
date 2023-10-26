@@ -55,8 +55,36 @@ A KY-57 logic analyzer is connected between the MCU and the ADXL345 acceleromete
 
 The KY-57 logic analyzer is used to show the ADXL345 accelerometer behavior. The ADXL345_init function configures the ADXL345 accelerometer with 10 bits full resolution at +/-4g and sets the device into measurement mode. Here is the implementation of the ADXL345_init function:
 
+<p align="center">
+    <img src="https://github.com/JoseLuis-Figueroa/adxl345-driver/assets/113542682/5a186351-2ece-447d-b7da-bc868912dbb3" alt="ADXL345_init">
+</p>
 
 The following images show each data transmission between the MCU and the ADXL345 within the ADXL345 function.
 
-The ADXL345_read function is used to get the x,y, and z axes of the accelerometer. The image illustrates the data transmission.
+Set the data range to 10 bits full resolution at +/-4g.
+<p align="center">
+    <img src="https://github.com/JoseLuis-Figueroa/adxl345-driver/assets/113542682/2fc53852-9000-497e-adeb-a27cda8ed1a8" alt="First Write">
+</p>
+
+Reset the accelerometer.
+<p align="center">
+    <img src="https://github.com/JoseLuis-Figueroa/adxl345-driver/assets/113542682/d2bc4880-6d65-4371-8289-6dfaf345e821" alt="Second Write">
+</p>
+
+Sets the device into measurement mode.
+<p align="center">
+    <img src="https://github.com/JoseLuis-Figueroa/adxl345-driver/assets/113542682/c92d7f24-4294-45a9-9f21-be3770457d51" alt="Second Write">
+</p>
+
+The ADXL345_read function serves to retrieve data from the accelerometer's x, y, and z axes, subsequently processing this data to obtain the g-scale factor. The code implementation for this function is provided below:
+
+<p align="center">
+    <img src="https://github.com/JoseLuis-Figueroa/adxl345-driver/assets/113542682/49f96ceb-3706-4913-a5d8-6a441e52012e" alt="Main code">
+</p>
+
+The following image shows the data reception of the axes values. 
+
+<p align="center">
+    <img src="https://github.com/JoseLuis-Figueroa/adxl345-driver/assets/113542682/c8f30ba3-87d8-4476-9ba4-755f3359aa86" alt="Data Reception">
+</p>
 

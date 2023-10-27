@@ -4,7 +4,8 @@
  * @brief Implement the adxl345 accelerometer using Nucleo-F401RE. 
  * @version 1.0
  * @date 2023-10-13
- * @note 
+ * @note The debug mode is used to test and review the behavior of the
+ * ADXL345 accelerometer.
  * 
  * @copyright Copyright (c) 2023 Jose Luis Figueroa. MIT License.
  * 

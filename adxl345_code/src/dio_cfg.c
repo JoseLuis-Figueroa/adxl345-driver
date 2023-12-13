@@ -35,7 +35,8 @@
  * input/output peripheral channel (pin). Each row represent a single pin.
  * Each column is representing a member of the DioConfig_t structure. This 
  * table is read in by Dio_Init, where each channel is then set up based on 
- * this table.
+ * this table. The NUMBER_DIGITAL_PINS constant should be accorded with the
+ * number of rows.
 */
 const DioConfig_t DioConfig[] = 
 {

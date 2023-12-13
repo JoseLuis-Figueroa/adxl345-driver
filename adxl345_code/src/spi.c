@@ -16,28 +16,28 @@
 /*****************************************************************************
 * Module Variable Definitions
 *****************************************************************************/
-/** Defines a array of pointers to the SPI control register 1*/
+/** Defines an array of pointers to the SPI control register 1*/
 static uint16_t volatile * const controlRegister1[SPI_PORTS_NUMBER] = 
 {
     (uint16_t*)&SPI1->CR1, (uint16_t*)&SPI2->CR1, (uint16_t*)&SPI3->CR1,
     (uint16_t*)&SPI4->CR1
 };
 
-/** Define a array of pointers to the SPI control register 2*/
+/** Define an array of pointers to the SPI control register 2*/
 static uint16_t volatile * const controlRegister2[SPI_PORTS_NUMBER] =
 {
     (uint16_t*)&SPI1->CR2, (uint16_t*)&SPI2->CR2, (uint16_t*)&SPI3->CR2,
     (uint16_t*)&SPI4->CR2 
 };
 
-/** Define a array of pointers to the SPI status register*/
+/** Define an array of pointers to the SPI status register*/
 static uint16_t volatile * const statusRegister[SPI_PORTS_NUMBER] =
 {
     (uint16_t*)&SPI1->SR, (uint16_t*)&SPI2->SR, (uint16_t*)&SPI3->SR,
     (uint16_t*)&SPI4->SR
 };
 
-/** Define a array of pointers to the SPI data register*/
+/** Define an array of pointers to the SPI data register*/
 static uint16_t volatile * const dataRegister[SPI_PORTS_NUMBER] =
 {
     (uint16_t*)&SPI1->DR, (uint16_t*)&SPI2->DR, (uint16_t*)&SPI3->DR,
@@ -184,17 +184,17 @@ void SPI_init(const SpiConfig_t * const Config)
         }
 
         /**Set the slave select pin management for the device*/
-        if(Config[i].SlaveSelect == SOFTWARE_NSS)
+        if(Config[i].SlaveSelect == SPI_SOFTWARE_NSS)
         {
             *controlRegister1[Config[i].Channel] |= SPI_CR1_SSM;
             *controlRegister1[Config[i].Channel] |= SPI_CR1_SSI;
         }
-        else if(Config[i].SlaveSelect == HARDWARE_NSS_ENABLED)
+        else if(Config[i].SlaveSelect == SPI_HARDWARE_NSS_ENABLED)
         {
             *controlRegister1[Config[i].Channel] &=~ SPI_CR1_SSM;
             *controlRegister2[Config[i].Channel] |= SPI_CR2_SSOE;
         }
-        else if(Config[i].SlaveSelect == HARDWARE_NSS_DISABLED)
+        else if(Config[i].SlaveSelect == SPI_HARDWARE_NSS_DISABLED)
         {
             *controlRegister1[Config[i].Channel] &=~ SPI_CR1_SSM;
             *controlRegister2[Config[i].Channel] &=~ SPI_CR2_SSOE;

@@ -3,10 +3,10 @@
  * @author Jose Luis Figueroa.
  * @brief This module contains the implementation for the Serial Peripheral
  * Interface (SPI).
- * @version 1.0
- * @date 2023-07-14
+ * @version 1.1
+ * @date 2025-03-19
  * 
- * @copyright Copyright (c) 2023 Jose Luis Figueroa. MIT License.
+ * @copyright Copyright (c) 2025 Jose Luis Figueroa. MIT License.
  * 
  */
 
@@ -23,8 +23,7 @@
  * Peripheral Interface. Each row represent a single SPI configuration.
  * Each column is representing a member of the SpiConfig_t structure. This 
  * table is read in by SPI_Init, where each channel is then set up based on 
- * this table. The SPI_CHANNELS_NUMBER constant should be agreed with the 
- * number of row.
+ * this table. 
 */
 const SpiConfig_t SpiConfig[] = 
 {
@@ -51,19 +50,22 @@ const SpiConfig_t SpiConfig[] =
  * This function is used to initialize the SPI based on the configuration
  * table defined in spi_cfg module.
  * 
- * PRE-CONDITION: configuration table needs to be populated (sizeof > 0)
- * POST-CONDITION: A constant pointer to the first member of the  
- * configuration table will be returned.
- * @return A pointer to the configuration table.
+ * PRE-CONDITION: configuration table needs to be populated (sizeof > 0). <br>
+ * POST-CONDITION: A constant pointer to the first member of the configuration 
+ * table will be returned. <br>
+ * 
+ * @return A pointer to the configuration table. <br>
  * 
  * \b Example: 
  * @code
  * const SpiConfig_t * const SpiConfig = SPI_ConfigGet();
+ * size_t configSize = DIO_configSizeGet();
  * 
- * SPI_Init(SpiConfig);
+ * SPI_Init(SpiConfig, configSize);
  * @endcode
- * 
- * @see SPI_ConfigGet
+ *
+ * @see SPI_configGet
+ * @see SPI_configSizeGet
  * @see SPI_Init
  * @see SPI_Transfer
  * @see SPI_RegisterWrite
@@ -79,4 +81,39 @@ const SpiConfig_t * const SPI_ConfigGet(void)
    */
   return (const SpiConfig_t*)&SpiConfig[0];
 
+}
+
+/*****************************************************************************
+ * Function: SPI_configSizeGet()
+*/
+/**
+*\b Description:
+ * This function is used to get the size of the configuration table.
+ * 
+ * PRE-CONDITION: configuration table needs to be populated (sizeof > 0) <br>
+ * 
+ * POST-CONDITION: The size of the configuration table will be returned. <br>
+ * 
+ * @return The size of the configuration table. <br>
+ * 
+ * \b Example: 
+ * @code
+ * const SpiConfig_t * const SpiConfig = SPI_ConfigGet();
+ * size_t configSize = DIO_configSizeGet();
+ * 
+ * SPI_Init(SpiConfig, configSize);
+ * @endcode
+ * 
+ * @see SPI_configGet
+ * @see SPI_configSizeGet
+ * @see SPI_Init
+ * @see SPI_Transfer
+ * @see SPI_RegisterWrite
+ * @see SPI_RegisterRead
+ * @see SPI_CallbackRegister
+ * 
+*****************************************************************************/
+size_t SPI_configSizeGet(void)
+{
+   return sizeof(SpiConfig)/sizeof(SpiConfig[0]);
 }

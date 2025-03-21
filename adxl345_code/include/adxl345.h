@@ -1,17 +1,17 @@
 /**
  * @file adxl345.h
  * @author Jose Luis Figueroa 
- * @brief The interface definition for the adxl345. This
- * is the header file for the definition of the interface for adxl345
- * digital accelerometer. 
- * @version 1.0
- * @date 2023-10-5
+ * @brief The interface definition for the adxl345. This is the header file
+ * for adxl345 digital accelerometer. 
+ * @version 1.1
+ * @date 2025-03-19
  * 
- * @copyright Copyright (c) 2023 Jose Luis Figueroa. MIT License
+ * @copyright Copyright (c) 2025 Jose Luis Figueroa. MIT License
  * 
  */
 #ifndef ADXL345_H_
 #define ADXL345_H_
+
 /*****************************************************************************
 * Includes
 *****************************************************************************/
@@ -38,15 +38,26 @@
 #define FOUR_G_SCALE_FACTOR (0.0078)
 
 /*****************************************************************************
+* Typedefs
+*****************************************************************************/
+typedef struct
+{
+    SpiChannel_t Channel;           /**< The SPI channel */
+    DioPort_t Port;                 /**< The GPIO port */
+    DioPin_t Pin;                   /**< The GPIO pin */
+}Adxl345Config_t;
+
+
+/*****************************************************************************
 * Function Prototypes
 *****************************************************************************/
 #ifdef __cplusplus
 extern "C"{
 #endif
 
-void ADXL345_init(SpiChannel_t Channel, DioPort_t Port, DioPin_t Pin);
-void ADXL345_read(SpiChannel_t Channel, DioPort_t Port, DioPin_t Pin, 
-uint16_t address, uint16_t *data);
+void ADXL345_init(const Adxl345Config_t * const Config);
+void ADXL345_read(const Adxl345Config_t * const Config, uint16_t address,  
+uint16_t size, uint16_t *data);
 
 #ifdef __cplusplus
 }   /*Extern C*/

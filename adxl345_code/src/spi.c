@@ -92,7 +92,7 @@ static uint16_t volatile * const dataRegister[SPI_PORTS_NUMBER] =
  * @endcode
  * 
  * @see SPI_configGet
- * @see SPI_getConfigSize
+ * @see SPI_configSizeGet
  * @see SPI_Init
  * @see SPI_Transfer
  * @see SPI_RegisterWrite
@@ -411,7 +411,7 @@ void SPI_receive(const SpiTransferConfig_t * const TransferConfig)
     {
         /* Send dummy data (Recommended).*/
         *dataRegister[TransferConfig->Channel] = 0;
-        /* Wait for RXEN flag to be sent*/
+        /* Wait for RXNE flag to be sent*/
         while(!(*statusRegister[TransferConfig->Channel] & SPI_SR_RXNE))
         {
             asm("nop");

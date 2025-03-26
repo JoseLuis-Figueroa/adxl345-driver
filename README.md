@@ -4,27 +4,29 @@
 
 This repository contains the implementation of the ADXL345 accelerometer driver. The ADXL345 is a compact, low-power, three-axis accelerometer designed for precise acceleration measurement along the X, Y, and Z axes, making it suitable for various applications.
 
-This project integrates reusable SPI and DIO drivers to configure and interface with the ADXL345. Developed in embedded C (bare-metal), it directly interacts with the microcontroller's (MCU) register map, adhering to industry-standard coding practices such as MISRA-C.
+This project integrates reusable SPI and DIO drivers to configure and interface with the ADXL345. Developed in **embedded C (bare-metal)**, it directly interacts with the microcontroller's (MCU) register map, adhering to **industry-standard coding practices** such as **MISRA-C**.
 
 ## Project Overview
 
-This repository focuses on creating reusable drivers and hardware abstraction layers (HALs) for microcontrollers. The tools used in this project include:
+This repository focuses on creating **reusable drivers** and **Hardware Abstraction Layers (HALs)** for microcontrollers. The tools used in this project include:
 
-- **Development Board:** Nucleo-F401RE.
-- **Logic Analyzer:** KY-57.
-- **IDE/Debugger:** Visual Studio Code (PlatformIO extension).
-- **Compiler Toolchain:** GNU ARM Embedded Toolchain.
+- **Development Board:** _Nucleo-F401RE._
+- **Logic Analyzer:** _KY-57._
+- **IDE/Debugger:** _Visual Studio Code (PlatformIO extension)._
+- **Compiler Toolchain:** _GNU ARM Embedded Toolchain._
 
 ## ADXL345 Driver Implementation
 
 The implementation configures SPI1 as a master to communicate with the ADXL345 accelerometer. The SPI settings include:
 
-- Baud rate: 4 kHz.
-- Full-duplex communication.
-- 8-bit data frame format.
-- Most significant bit (MSB) transmission.
+- **Baud rate:** 4 kHz.
+- **Comunication mode:** Full-duplex communication.
+- **Data frame format:** 8-bit.
+- **Bit transmission order:** Most significant bit (MSB) first.
 
 A KY-57 logic analyzer is connected between the MCU and the ADXL345 for data reception and analysis. The following table outlines the SPI pin connections:
+
+### **Pin Connections**
 
 <div align="center">
 <table>

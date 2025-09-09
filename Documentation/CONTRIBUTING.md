@@ -133,7 +133,7 @@ doxygen Doxyfile
 
 You can view the documentation in the `/Documentation/Doxygen` folder or visit:
 
-- [ADXL345 Driver Docs.](https://raw.githack.com/JoseLuis-Figueroa/Reusable-Drivers/main/Documentation/Doxygen/DIO/output_files/html/index.html) (To be updated).
+- [ADXL345 Driver Docs.](https://raw.githack.com/JoseLuis-Figueroa/adxl345-driver/main/Documentation/doxygen/output_files/html/index.html) (To be updated).
 
 ---
 
